@@ -1,0 +1,2705 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-12-16 Thu 10:59 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="jayradhey" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org5fb0f9e">1. Predictions</a></li>
+<li><a href="#orgbb595f6">2. 800 Years Predictions – Hazrat Naimat Ullah Shah Wali.</a></li>
+<li><a href="#org2f6859e">3. Sri Veerabrahmendra the Precursor of Kalki English book</a></li>
+<li><a href="#org09781a0">4. Kali-yugam Intro</a>
+<ul>
+<li><a href="#org44cebea">4.1. how to create janma-kundali (birth chart and jatha-kam, lagna-kundali) :</a></li>
+<li><a href="#orgca639c9">4.2. Lunar Months(Masa):</a></li>
+<li><a href="#org4d47b1a">4.3. 60 year samvatsar cycles</a>
+<ul>
+<li><a href="#org39078c9">4.3.1. Names of samvatsaras</a></li>
+<li><a href="#org43fa077">4.3.2. Influence of samvatsar on birth</a></li>
+</ul>
+</li>
+<li><a href="#orge3ad6e2">4.4. Estimate start of kali-yuga lord sri krihsna leaves earth</a>
+<ul>
+<li><a href="#orgf88e116">4.4.1. Estimate start of kaliyuga from kalagnana prophecies:</a></li>
+</ul>
+</li>
+<li><a href="#org79bd595">4.5. Visualistaion or grahical understanding of vedic-cosmology, vedic astrologi, and hindu-lunar calander using stal</a></li>
+<li><a href="#orgdabee01">4.6. Rasi and Nakshatra</a></li>
+</ul>
+</li>
+<li><a href="#org95dd157">5. EMACS vedic solar-lunar clander</a></li>
+<li><a href="#orga0aac7b">6. Python code</a></li>
+<li><a href="#org85b8349">7. Kalagnana</a></li>
+<li><a href="#org1d1b571">8. https://laxmimadhav.wordpress.com/2016/10/01/kalagnanam/</a></li>
+<li><a href="#org40fa474">9. kalagnanam : temple to visit</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5fb0f9e" class="outline-2">
+<h2 id="org5fb0f9e"><span class="section-number-2">1</span> Predictions</h2>
+</div>
+
+<div id="outline-container-orgbb595f6" class="outline-2">
+<h2 id="orgbb595f6"><span class="section-number-2">2</span> 800 Years Predictions – Hazrat Naimat Ullah Shah Wali.</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<a href="https://laxmimadhav.wordpress.com/2016/09/30/800-years-predictions-hazrat-naimat-ullah-shah-wali/">https://laxmimadhav.wordpress.com/2016/09/30/800-years-predictions-hazrat-naimat-ullah-shah-wali/</a>
+</p>
+
+<p>
+September 30, 2016 LAXMIMADHAV	
+Page-1: Title Page
+</p>
+
+<p>
+Page-2 to Page-8 (of original urdu book)
+</p>
+
+<p>
+PREFACE
+Hafiz Muhammad Sarwar Nizami’s
+(Edited with best of Intentions)
+</p>
+
+<p>
+My friends,
+The above-mentioned words of God means that Indeed the friends of Allah are neither in fear nor in grief.
+Fear results from not knowing the future and grief results from what happened in one’s past… The glory of the friends of Allah is that neither they feel grief on past events nor are they afraid of the future because when they become friends of Allah, Allah becomes a friend of them.
+</p>
+
+<p>
+… Difference between Wali and Walayat should be kept in mind. Walayat (Sainthood) is a position, a station that is assigned to a Wali (Saint). i.e. Wali has his own existence and Walayat has its own existence. Take an example of Ilm (knowledge) and A’alim (Scholar). A’alim is the one who has been given the knowledge. Similar is the relation in Nabuvat (Prophet hood) and Nabi (Prophet). Prophet is the one who has been assigned the station of Prophet hood.
+</p>
+
+<p>
+Now please note the difference in the status / knowledge of Prophet hood and Sainthood.
+</p>
+
+<p>
+Prophet (PBUM) said:
+I’ve come to known whatever is in the skies and whatever is in the earths (worlds). I.e. I see the universe as I see my palm.
+Whereas, Walayat said: Syedna Abdul-Qadir Jillani R.A said: I see the universe as I see a grain of rice on my palm.
+</p>
+
+<p>
+Difference in both statements should be noted. The sayings of Prophet hood are like a plain palm whereas the sayings of Sainthood are like a grain on palm. When a grain of rice is placed on a palm, one dimension (down) out of six dimensions (left, right, front, back, up and down) is invisible to the eyes. Whereas, there is no dimension hidden on plain palm. Thus, where Sainthood reaches its top point (means where Sainthood reaches to top limit), there begins the Prophet hood. Similarly, where materialism reaches its top point (means where materialism reaches to top limit), there starts the Roohaniat (Spiritualism)
+Let’s ponder over the knowledge of Allah who is infinite and whose attributes are infinite. It is not possible that God who is infinite has limited attributes or God who is limited has infinite attributes.
+</p>
+
+<p>
+God knows everything from the beginning. For Him everything is already known (Ma’loom – in information). Ilm (Knowledge) comes later. That is why friends of Allah say that Ma’loom is superior to Ilm. For a man, Ilm comes first and Ma’loom is secondary. For Allah, Ma’loom comes first and Ilm comes later.
+</p>
+
+<p>
+Sheikh Akbar Muhayudin Al-Arabi states that information of Allah that were originated from the Nafs (soul?) of Allah granted knowledge to Allah. Because Allah is infinite, unique, One, unlimited and is not dependent on anyone, therefore He himself is A’alim. All Knowledge, All Information (whatever is there to know) and the Knower, all that 3 levels, belong to Allah who is infinite.
+</p>
+
+<p>
+Holy Hadeeth is:
+</p>
+
+<p>
+(In the beginning) There was nothing besides Allah. So when there was nothing with him (in the beginning), therefore there is nothing with him (now)… that is when there was nothing and only Allah existed, he knew everything. To him, there was nothing that was hidden (or unknown). He was Aleem (an attribute, meaning knower); he is Aleem and will remain Aleem. There is no restriction of past, present and future… neither he is bound by Time nor by space. (Similarly) his attributes are neither bound by time nor by space.
+</p>
+
+<p>
+Allah says in Al-Quran:
+Indeed Allah encompasses everything with Ilm.
+</p>
+
+<p>
+His knowledge is pure and without any medium or source. Man through medium knows the knowledge of Smoke and Fire. By seeing the smoke, knowledge of man informs the man that there is a fire there. The existence of smoke denotes the existence of fire i.e. the knowledge of Fire is gained through the medium of smoke. Knowledge of Allah is pure and without a medium.
+My friends,
+</p>
+
+<p>
+Allah says in Quran:
+We have stated everything openly. In Lohe-Mahfooz (The Tablet. The Akashic Records)
+</p>
+
+<p>
+And Prophet Muhammad S.A.W (PBUH) said that Allah Ordered the Pen:
+O Pen! Write down everything that is known to me and whatever is going to happen till the Day of Judgment. Allah ordered and the Pen obeyed.
+</p>
+
+<p>
+Imam Hussain R.A. Said in “Meerat-ul-Aa’rifeen”:
+All praise to Allah who extracted (Ilm) from “Noon” (an alphabet) and wrote it in (through) the mouth of Pen.
+</p>
+
+<p>
+Allah says in Al-Quran:
+Let’s understand it. Ink is the status of knowledge where all the information is hidden or a status where all alphabets, words, sayings and whatever is said is hidden but cannot be separated and everything is already known to the Self of God (or the soul of God) even the level of ink itself. Then all those information was described through the mouth of the pen and all those information were saved and separated in sentences.
+</p>
+
+<p>
+That is why we see in Hadeeth:
+The first ever creation was my Noor (light). First ever creation was the Pen. First ever creation was the intellect (wisdom or intelligence).
+</p>
+
+<p>
+All three levels, stations and attributes belong to one personality. i.e. Hazrat Muhammad S.A.W.
+Allah took all three levels and swore that O Muhammad S.A.W., I sware of the station when you were at level of Ink, and I sware of the station when you were at the level of the Pen and I sware of the station when you were at the level of Sentence.
+</p>
+
+<p>
+Note: Alphabets, Words, and what was said all three are located in a sentence.
+</p>
+
+<p>
+Allama Iqbal said (Bal-e-Jibreel Poem: Read complete Poem Zauq-o-Shauq ):
+</p>
+
+<p>
+Allah said:
+We have openly described everything in Lohe-Mahfooz (Tablet, Akashic Record)
+</p>
+
+<p>
+Jalaludin Rumi R.A. Said:
+Lohe-Mahfooz is in front of friends of Allah (Walis). Whatever is written there is pure and without error.
+Naimutullah Shah Wali r.a. was a great Wali of Allah. Knowledge of Jaffar (Alphabets, words, numerology) was his slave. It is a small miracle that 800-year-old predicted events are happening to the letter. Some sources suggest that he wrote more than 2000 poetic stanzas out of which the translator/author has 248 stanzas. Some stanzas are incomplete and singular.
+</p>
+
+<p>
+He traveled through many cities to reach Kashmir. There, he passed away.
+</p>
+
+<p>
+He said:
+Lord Curzon (Viceroy) banned this prediction stating: how it is possible that we only rule India for 100 years?
+The stanzas of qaseeda are very rare now. The lovers of Awliya protected the stanzas. It is saved in manuscripts, and in memory.
+</p>
+
+<p>
+Author thought about publishing the qaseeda for a long time. Now with the help of Man Ali Hassan, it will be published and the reader will enjoy it.
+</p>
+
+<p>
+Please remember me in your prayers,
+Hafiz Muhammad Sarwar Nizami, Layalpur (Now Faisalabad, Pakistan) – 1972
+(Now The Predictions Part)
+Page-9 – Family Tree of Mogal Empire (Mughal Dynasty)
+</p>
+
+<p>
+Page-10
+</p>
+
+<ol class="org-ol">
+<li>I am telling the truth, there will be a King in this world. Taimur his name and he will be the Conqueror.(l)</li>
+<li>After Him, Meeran Shah appear in this world who will be the friend of the conqueror Taimur Shah.(2)</li>
+<li>When he passes away from this world, and then will appear the King of Humans and Jinns (Ginns).(3)</li>
+<li>After Him, Umer Sheikh will be the King and he’ll be a claimer and a very Kind person.</li>
+<li>After that, Umer Bin Sheikh will be the owner of this land and he’ll indulge into a lot of riches and luxuries.</li>
+</ol>
+<p>
+Page-11
+</p>
+
+<ol class="org-ol">
+<li>After him shall come The King Babar who will be the king of Kabul, later he will appear in Delhi as a ruler of India.</li>
+<li>After Sikandar [Lodhi], till the time of Ibrahim Shah (King), Behold there will be unrest and discord in his Kingdom.(4)</li>
+<li>Then the God will appoint Humayun as the King of India but meanwhile an Afghan will appear.(5)</li>
+</ol>
+<p>
+Page-12
+</p>
+
+<ol class="org-ol">
+<li>Then God will grant kingdom to Humayun. Then will happen an incident in Humayun’s life. Meanwhile an Afghan will appear. Afghan’s name shall be Sher Shah. Humayun will run to the land of Iran, to the bloodline of the prophet so that they can honor humayun. The Iranian King will help Humayun so that Humayun can be honored as a King. By the time Humayun will attack India again, SherShah will be dead and his son will be ruling the land.(6)</li>
+<li>So Humayun will conquer India. Then will come Akbar as the King of the land.(7)</li>
+</ol>
+<p>
+Page-13
+Explanation (In blue color numbering by H.M Sarwar Nizami himself as in urdu book) 
+</p>
+
+<p>
+(1) History: Taimur Shah attacked India in 1398. Muhammad Tughlaq was the King of India at that time. After his defeat he fled and Taimur Shah got hold of India. He returned to Samarkand later. Died in 1412
+(2) History: Meeran Shah = Sultan Muhammad Mirza
+(3) History: That is Sultan Abu Saeed Mirza who was brave and Powerful.
+(4) History: Ameer Taimur left his second-in-command Syed Khyzr Shah. He and 3 successors till Ala-ud-din were governors. From 1414 to 1451, this family of Syeds governed. Lodhi Family ruled from 1414-1451.
+(5) History: Zaheer-uddin-Babar was from the fifth Generation of Taimur… Because of a dispute with Ibrahim Lodhi, Dolat Khan (the ruler of Punjab) and Rana Sanga (the ruler of Mewar) invited Babar to attack India. Babar saw it as an opportunity and he attacked India in 1526. After four unsuccessful attempts, he succeeded in the fifth. His Govt. was from 1526-1530
+(6) History: Sher Shah was the son of a landlord called Hassan Khan. He was in service of the ruler of Bihar Province. Later he became ruler by force. Because of this act, Humayun attacked Sher Shah in 1540 but got defeated. Humayun fled to Iran. In 1545, with the aid of Iran, humayun conquered Kabul and Qandhar. Humayun conquered India by the year 1555.
+(7) History: Jalal-ud-Din Muhammad Akbar Ruled India from 1556-1605
+——————————————————————————————-
+</p>
+
+<ol class="org-ol">
+<li>Then Jahangeer shall be the King. He will sit on the Throne like the bright sun.(8)</li>
+<li>When He will leave the world, Shah japan, The second Conqueror will appear.</li>
+<li>Will rule for less than 40 years and his son will sit on the throne in front of his eyes.</li>
+<li>There will be unrest and discord in his time and the country will be in bad conditions. Availability of Food will be surprising.</li>
+<li>When the world will be like this, the people will be extremely worried. The Jupiter will be like a flame thrower</li>
+<li>He will rule for 20 years till the youngest of his sons will appear.</li>
+<li>His powerful voice will fill the world. He will take care of the people.(9)</li>
+</ol>
+<p>
+Page-14
+</p>
+
+<ol class="org-ol">
+<li>Then the God will show his decision. Know that his name will be Muazam. He will appear on the scene.(10)</li>
+<li>During his time, the people will be united, peace shall be everywhere. He will be like an ointment to the wounds of the land.</li>
+<li>He will rule for few years then pass away. His son will become King.(11)</li>
+</ol>
+<p>
+Page-15
+</p>
+
+<ol class="org-ol">
+<li>With his arrival, there will come balance. Unhappiness and jealousy will fade away. There will be happiness everywhere.</li>
+<li>Then will come an extremely powerful king called Muhammad. will come to India and become ruler.(12)</li>
+<li>The time of Muhammad’s Kingship is 21 years. Then will come a ruler of the rulers.(13)</li>
+<li>Nadir Shah will come from km. He will occupy the Throne of India by force. Mass killings of Delhi’s population will occur.(14)</li>
+</ol>
+<p>
+—————————————————————————-
+(8) History: Jahangeer Noor-ud-din Muhammad ruled from 1605-1627
+</p>
+
+<p>
+(9) History: Shah-Japan Shahab-ud-din Muhammad ruled from 1627-1658. He had 2 sons. Dara-Shikoh and AurangZeb. There was discord and fighting in between them. The people were also divided in two camps. In 1650, there was a fearsome war in between AurangZeb and Dara. Dara fled and got defeated. AurangZeb continued the manhunt. Malik jeevan an (the ruler of Sindh) handed Dara over to AurangZeb. Dara was executed. AurangZeb Alamgeer Mohay-ud-din ruled from 1658-1707.
+(10) History: Bahadur Shah Muazam ruled from 1707-1712.
+(11) History: The son of Bahadur Shah Muazam was Farrukh Seer. Who ruled from 1712-1719
+(12) History: Muhammad Shah ruled India from 1719-1740.
+(13) History: Muhammad Shah ruled for exactly 21 years
+(14) History: Nadir Shah attacked India in 1739. Nadir Shah used to be a herd-keeper by profession. He progressed and became the king of Iran. Later he conquered Kabul and Qandhar. Seeing a weak kingdomship of India, he attacked in 1739. Muhammad Shah was defeated and he asked for truce. Nadir Shah entered Delhi as a guest of Muhammad Shah. After few days, a rumor spread that Nadir Shah is murdered. So the soldiers of Delhi started killing the army of Nadir Shah. Nadir Shah got extremely angry and he ordered the Mass murder in Delhi. In 12 hours, approx. 150,000 people were murdered. At the request of Muhammad Shah, this mass murder was stopped. Looting and destruction continued for 2 months. Nadir Shah returned to Iran after getting Taoos (The Throne), Kohinoor Diamond and lot of treasure.
+————————————————————————————–
+</p>
+
+<p>
+Page-16
+</p>
+<ol class="org-ol">
+<li>When the ruler of India will about to leave this world to continue his journey forward, his family will be in problems.</li>
+<li>Then will come mighty Ahmad the King. He will rule India and people will obey his orders.(15)</li>
+</ol>
+<p>
+Page-17
+</p>
+
+<ol class="org-ol">
+<li>When Akbar will be the King, there will appear a Saint.</li>
+<li>His name would be NANAK. Populace will give attention to him. This powerful Fakeer [seer] will become famous.</li>
+<li>He will be famous in Punjab and Sikh nation will be among his followers. He will be the spiritual leader of this nation.(16)</li>
+<li>The Sikh Nation will be cruel towards Muslims and this cruelty and innovation will appear in 40 years.(17)</li>
+</ol>
+<p>
+Page-18
+</p>
+
+<ol class="org-ol">
+<li>Then The Christians [English] will occupy India. Their order will be obeyed there for about 100 years.(l8)</li>
+<li>When the cruelty and one-sidedness will reach its highest point, the Christians will harm the religion.(l9)</li>
+<li>The Christians [English] will be involved in a war with Germany. The sign of destruction and chaos will appear. (20)</li>
+<li>The Christians (England) will win the war against Germany but the war will weaken their system of rule.</li>
+</ol>
+<p>
+Page-19
+</p>
+
+<ol class="org-ol">
+<li>The Christians will leave the India but before doing so, they will sow the life-taking discord among the populace.</li>
+<li>India will be divided into two countries and for this reason the blood of humans will run. Destruction and anarchy will rule beyond imagination.</li>
+</ol>
+
+<p>
+———————————————————————————————
+(15) History: After the death of Muhammad Shah (Rangeela), his son Ahmad Shah was the ruler for few years. All the ministers were parties in chaos and wars. Rohails revolted. To curb them, Ahmad Shah had to seek assistance of Marhatas. In 1752, Ahmad Shah Durram attacked Punjab. He was the victor. Punjab became a part of Durrani Empire. In 1758, one of the his ministers Ghazi-ud-din son of Asif jah (Nizam-ul-Mull, Ruler of Haiderabad Dakar) conspired against him, blinded him, and then Alm Shah aka Alamgeer the Second became the king. He ruled from 1759-1806. Akbar the Second ruled from 1806-1837 and Bahadur Shah Zafar the Second was the ruler from 1837-1857. There is no Stanza was found about them.
+</p>
+
+<p>
+(16) History: Baba Guru Nanak was born in 1441 and died in 1528.
+(17) Maybe 40 years period is after the death of Guru Nanak – Editor
+(18) History: England ruled India for about 100 years. Lord Curzon (Viceroy of India) declared a ban (by law) on these predictions.
+(19) History: During the reign of English a scholar called Mirza Ghulam Ahmad sowed the seeds of discord in the religion of Islam.
+(20) History: WWI was from 1914-1918. After 21 years, WWII was fought from 1939-1945. Germany was involved in both the fights.
+————————————————————————–
+</p>
+<ol class="org-ol">
+<li>A lot of Muslims will leave their homes due to the wrath of the Hindus. They will migrate. The dignity and honor of Muslims will be in ruins. Their women and girls will be kidnapped.</li>
+<li>Muslims will be in peace in the area of their forefathers. After Punishment and problems, their destiny will appear.(21)</li>
+</ol>
+<p>
+Page-20
+</p>
+
+<ol class="org-ol">
+<li>The banner of Islam will be the prominent for 23 years. Then divine punishment will come upon them.</li>
+<li>Their own land will become narrow for them. Destruction and anarchy will become their destiny.(22)</li>
+<li>After their destruction. Allah will send blessings, victory and help from neighbors.(23)</li>
+<li>An army of Mongols (24) will come from North to help. Iran and Turkey will help too.(25)</li>
+</ol>
+<p>
+Page-21
+</p>
+
+<ol class="org-ol">
+<li>This help will appear after the Pilgrimage.(26) When Allah will send the divine help from unknown.(27)</li>
+<li>Divine help will turn the defeat into a victory. I am seeing all this with deep understanding. That Muslims will be the victor and successful.</li>
+<li>When these predictions were made, it was the year 570 Hijra. So the God wills and will appear in the same manner. (28)</li>
+</ol>
+<p>
+Page-22
+</p>
+
+<ol class="org-ol">
+<li>When the cruelty and crime will be spread in his era, there will come a King of the west. He will be the real good administrator.(29)</li>
+</ol>
+<p>
+———————————————————————————————-
+(21) History: Pakistan got independence on August 14, 1947. The genocide, rape and kidnapping of girls and women is not a secret. The migrants sacrificed their lives and their wealth in order to get independence.
+</p>
+
+<p>
+(22) History: Yahya an Ruled from March 1969-December 1971. East Pakistan was lost due to a war in between India and Pakistan on November 22, 1971. The war with West Pakistan started on December 3, 1971, resulted into destruction and chaos in Pakistan. Yahya Khan’s incompetence and careless resulted into the loss of The Eastern Province and about 100,000 soldiers became POWs. About 1.5Million Bengali and non-Bengali were killed. Before that time, for 23 years, Islam and Muslims were safe and sound in this part of the world.
+(23) Stanzas 41-42-43 describe the events of upcoming future war.– MC
+(24) Maybe a reference to China — MC
+(25) Possibly, Muslim warriors will join hands to repel the aggression and occupation of their lands. — MC
+(26) 2008 pilgrimage was on December 9’s. 2009-2012 will be in the months of October-November -MC
+(27) Probably, help will come from neighboring countries like Afghanistan, Iran, China and turkey. Saudi Arab, Libya, Egypt, Syria, Iraq, Jordan, and all other Middle Eastern Muslims will help Pakistan. People of knowledge categorize mankind into four classes. Aryans, Mongols, Ethiopians and Europeans. European people are white in complexion. Ethiopians are black. Aryans are people of Indo-pak and Middle East. Mongols are people from Indonesia and China. China is located in the north of Pakistan. China and Pakistan are considered friendly nations. For this reason, maybe Shah Naimatullah Wali is indicating Chinese nation as Mongols. Such help is to come after the 10 Zil-Hujj. We can assume that the equipment of war will arrive during Muharram. – Hafiz Nizami
+(28) Based on this copy of qaseeda and on another different copy that I have, I assume that Naimat-ullah Shah wali always concluded a set of predictions by stating the date in the last stanza. -And Allah knows best- — MC
+(29) Hafiz Nizami, The original compiler/translator commented that Since East Part of Pakistan got separated and became an independent country (Bangladesh), Naimat-ullah Shah continued with the future of the Western part of Pakistan. – MC
+—————————————————————————————–
+</p>
+
+<ol class="org-ol">
+<li>This Sword of the Lion of Ali (Sher-e-Ali or Sher-Ali) will wipe off the deniers. He will be the supporter of the religion of Muhammad S.A.W. He will be the protector of the country.(30)</li>
+<li>There will be a great war in between him and the other. No doubt a large population will be killed.</li>
+<li>The King of the western Part will be the victor on the basis of his weaponry. The defeat of the denier nation will be beyond anyone’s imagination.(31)</li>
+<li>Islam will rule in India for 40 Years, then will come the anti-Christ [Dajjal] from the city of Asfahan.(32)</li>
+<li>Listen Carefully, I explain to you that to destroy this anti-Christ [Dajjal] Isa (Yesu / Yeshua/ Jesus) will come and Imam [leader] of Last Era, Mahdi, will appear.</li>
+</ol>
+<p>
+Page-23
+</p>
+
+<ol class="org-ol">
+<li>Naimat-ullah Shah is aware of the secrets of the unseen therefore Indeed what he’s saying will appear in this world, universe and in that era.(33)</li>
+</ol>
+
+<p>
+————————————————————————————————
+(30) Commentary of Hafiz Nizami is quite long and a repetition of what was stated earlier. 
+</p>
+
+<p>
+(31) Because some stanzas are missing here, so It is not clear if the seer was predicting the Afghan-Russia was or some future war yet to happen If No. 50 is the continuation of the 46-49, then this King has not yet arrived and the events are yet to occur. – MC
+(32) A province of Iran. There’s a large population of Jews living in Iran. Some prophecies of the Prophet Muhammad S.A.W. clearly mention that the Anti-Christ will come out of Isphahan and will have 70,000 Jewish followers. – MC
+(33) Unseen is a controversial issue among Muslims. Some say that no one can know the unseen. They forget that everything in this universe is running under a system. Allah has a system for ‘unseen’ as well. ‘Unseen’ is unseen and in the knowledge of Allah alone until Allah let it to be seen and known. Whatever Allah commands, it appears on the Lohe-Mahfooz (The Preserved tablet or Akashic records). Those who have the ability and permission can view it. Some can see the commands for one day, some for a week, some for a month, some for a year and some can view, as much as Allah wants them to. Predictions were made by the prophets, by the mystics and seers through out the history. Unknown is unknown until Allah let it to be known. -And Allah knows best- – MC
+——————————————————————————————–
+Page-24
+</p>
+
+<ol class="org-ol">
+<li>I am looking at the power of the God (or ‘destiny’); I am looking at the condition of the world.</li>
+<li>I am not saying this out of the knowledge of Astrology, but looking at it with the grace of Allah.</li>
+<li>In Khurasan [Iran], Egypt, and Syria And in Iraq, seeing the evil of war.</li>
+<li>All of them will be in poor condition. Although one in the Thousand, I am looking at.</li>
+<li>Listening to a strange story, watching a city in great chaos.</li>
+<li>Murder, destruction and countless army, left &amp; right, I am looking at.</li>
+<li>Lowest [mean] of the people in knowledgeable and expert works, I See</li>
+<li>Religion is very week, bad habit of pride, I See</li>
+</ol>
+<p>
+Page-25
+</p>
+
+<ol class="org-ol">
+<li>Friends from every nation, in bad situation and are mourning</li>
+<li>Rise and fall, appointment of Governors, two times, I see</li>
+<li>Turks and Tajiks are the enemies of each other, I see</li>
+<li>Lies, fraud and deceit everywhere, in elders and in young generation, I see</li>
+<li>The value of good deeds is very very low. Flames at one place, I see</li>
+<li>If today there is any peace, only in the mountains, I see</li>
+<li>Although I am watching all this but am not worried. The joys ahead, I see</li>
+<li>After this year, and some other years, I look at the world as in a movie theater.</li>
+<li>A wise King as an honorable leader, I see.</li>
+</ol>
+<p>
+Page-26
+</p>
+
+<ol class="org-ol">
+<li>This year is not like the others. I am not seeing like someone see in aware state.</li>
+<li>When the year “GHA” [Alphabet] and the ”RA” [Alphabet] will pass in years, I see a strange business (event).(34)</li>
+<li>Dust &amp; Rust on the mirror of self (hearts) of the people of this world, I see</li>
+<li>Darkness of unbound and unlimited cruelty spreading through the Cruel of the cities, I see.</li>
+<li>Sorrowful war and living Evil, in the middle and at the sides, I see.</li>
+<li>Slave will be the Master and the Masters will become slaves, I see.</li>
+</ol>
+<p>
+——————————————————————————–
+(34) Referring to a system in ‘Jar’ (a knowledge of Alphabets and Numerology) in which Alphabets are assigned to years or the attributes of a certain alphabet commands a certain year. – And Allah Knows Best – MC
+</p>
+
+<p>
+——————————————————————————–
+</p>
+<ol class="org-ol">
+<li>This year the friend will be in trouble, his heart filled with sorrows, I see</li>
+<li>At the face of Gold, there will be a new stamp. His “dirham” [currency] will be pure, I see.</li>
+<li>All the rulers of the world are fighting with each other, I see.</li>
+<li>The face of moon is dark, the heart of the Sun bleeding, I see.</li>
+<li>Merchants in far off jungles, without companions and tired, I see.</li>
+</ol>
+<p>
+Page-27
+</p>
+
+<ol class="org-ol">
+<li>Hindu nation in poor conditions, I see. The cruelty of Turks and Tatars, I see.</li>
+<li>Some trees of the garden of the world, without spring, without fruit, I see.</li>
+<li>Then helping others and contentment, staying in seclusion is the best, I see</li>
+<li>0 the one who is addressed, don’t worry because in this trouble, the joy of meeting the FRIEND, I See.</li>
+<li>When winter without fruits will pass, then shiny spring will come, I see.</li>
+<li>When his [Friend’s] era will pass, his son as his souvenir, I see.(35)</li>
+<li>The companions of this highly honored one shall be owners of crown [or living like Kings], I See.</li>
+<li>The kings of all? realms will reach the heights of their rise, I see.</li>
+</ol>
+<p>
+Page-28
+</p>
+
+<ol class="org-ol">
+<li>His Works, his features, his knowledge and kindness, his wisdom and understanding will be same as the Prophet, I see.(36)</li>
+<li>His White hand with Brightness and in it a Sword, I See.</li>
+<li>Fragrance coming out of the gardens of Prophet’s way, I smell, the flower of the religion in bloom, I See.</li>
+<li>0 my Brother, this Rider’s rule for 40 years, I see.</li>
+<li>Disobedient people embarrassed and ashamed, in front of this pious Imam [leader], I see</li>
+<li>He will be the “Ghazi”(37), keeper of friendships, and destroyer of the enemies. The kind, friendly and humane, I see.</li>
+<li>Beauty of the Way of the prophet and spread of Islam, strong and stable, I See.</li>
+<li>The treasures of the Persian Kings and the Wealth of Alexander, being consumed in good works, I see.</li>
+</ol>
+<p>
+Page-29
+—————————————————————————–
+</p>
+
+<p>
+(35) The ‘friend’ referred here can be Prophet Isa (A.S.) or Muhammad Mehdi R.A. -And Allah Knows Best — MC
+</p>
+
+<p>
+(36) Definitely a reference to Muhammad Mehdi R.A. (The guided one) or his predecessor And Allah Knows Best  — MC
+(37) The One who fought the wars and lives — MC
+—————————————————————————-
+</p>
+
+<ol class="org-ol">
+<li>He himself will be the Imam (Leader) and World will be on one axis (center).</li>
+<li>Meem, Ha, Meem, Dal (Muhammad), his name shall be, this I see and read.</li>
+<li>Because of him, the religion and the world will be filled and joyful, Lucky are the people, I see.</li>
+<li>Mehdi of the time and Isa [Yesu/Yeshua/Jesus] of era, both are royal riders, I see.</li>
+<li>World as a city, I see, personality as strong as Castle, I see.</li>
+<li>My Sultan will have 7 Ministers, all of them will be successful, I see.</li>
+<li>Refreshing drinks in the hands of the serving ones, I see.</li>
+<li>The Steel swords of Rusty hearts, useless and scrap, I see</li>
+</ol>
+<p>
+Page-30
+</p>
+
+<ol class="org-ol">
+<li>Sheep with the Wolf and Deer with the Lion, staying in the same place,(38) I see.</li>
+<li>The clever Turk in ecstasy, I see. His enemy is drunk, I see</li>
+<li>Naimat Shah, Sitting alone, is seeing all this.</li>
+</ol>
+
+<p>
+——————————————————-
+(38) And not harming each. A golden Age — MC
+——————————————————- 
+</p>
+
+<p>
+NOTES
+                           By Hafiz Muhammad Sarwar Nizami’s
+Respected Elders,
+In the above-mentioned Qaseeda (poetic story), Naimat-ullah Shah Wali R.A. used “May Beenam” as radeef. It means, “I am Looking at”. According to the knowledge of Sarf, its masdar is “Deedan”. “Deed” is its past tense and “baind” is its mazar’a. Because “May Beend” shows the present tense so when used as singular Mutakalam, it will become “May Beenam”. He’s a friend of Allah and is stating that “I am, looking at”.
+‘To see’ is of two types. One is to see through physical eyes, the other is through inner spiritual eyes.
+</p>
+
+<p>
+Maulana Ghulam Rasool Alampur Kotly r.a. Said:
+Close these physical eyes that cannot do justice Open your inner eyes for salvation.
+Page-31
+</p>
+
+<p>
+‘To see’ from the physical eyes is to look through physical senses. ‘To see’ through spiritual eyes is to look through power of vision. The name of this power is ‘thought’. Thought process is of two types. One is a limited and the other is absolute. Limited thought is associated with physical me whereas absolute thought is beyond me. Everything that we see in our world is of high density. Sufi termed it as ‘the realm of bodies’. Whatever is present in the realms of bodies, all of it is present in the ‘realm of shapes’. However, all of the ‘realm of shapes’ cannot be present in the ‘realm of bodies’. Because in its expansion, this ‘realm of bodies’ to ‘realm of shapes’ is like a drop of water in an ocean.
+</p>
+
+<p>
+Beyond ‘realm of shapes’ is the ‘realm of soul’. In its expansion, the ‘realm of shapes’ to the ‘realm of soul’ is like a ring in a large land. So, in order to understand, take ‘realm of shapes’ as a ‘burzakh’ (purgatory) in between the ‘realm of soul’ and ‘realm of bodies’ or take it as a veil.
+</p>
+
+<p>
+Realm of soul is the first level of the divine reality. It is a collective level. All shapes and forms are contained in it. All shapes are vague (without specific gender, without full form). Contrary to this, in the realm of shapes, all shapes are present in detailed forms. But these shapes or forms are of very light density.
+Page-32
+</p>
+
+<p>
+So when the limited thoughts are purified i.e. when Nafs (self) and heart is purified, then the third eye is able to view the shapes of lighter density. It means that when the reflection of such shapes is put on the mirror of bound imagination, then the events of the future are seen and predictions can be made that a certain event can happen at a certain time. Its example is same as of Sun, clouds and earth. If clouds come in between the sun and the earth, then the sunlight cannot reach the earth. The clouds are the burzakh in between the sun and the earth. If clouds are not present, then the sunlight will come down and light the earth.
+</p>
+
+<p>
+… To summarize, if the bound astral body is purified, then the lower density shapes and forms which are present in the realm of shapes, will en-light one’s heart and the seeker will then be able to see the future and will have the power to understand the divine knowledge and will have the power to observe.
+</p>
+
+<p>
+Naimat Shah Wali was one of the greatest saints and a friend of Allah. For this reason, he was granted the knowledge of ‘unseen’.
+Page-33
+</p>
+
+<p>
+He used ‘May Beenam’ in the above-mentioned Qaseeda. The understanding of divine wisdom and power to observe starts in the realm of shapes i.e. realm of moot but his levels/stations are far higher than this. He had the access to the realm of jabroot and lahoot.
+</p>
+
+<p>
+Maulana Jalal-ud-din Roomi r.a. Said:
+When the mirror of your heart will be clean and purified Then you will witness all shapes through water or dust
+Page-33 (continued)
+</p>
+
+<ol class="org-ol">
+<li>I ignore the old tale and inform about the Second Era (of Indo-pak)</li>
+<li>From the Mogul Family, conqueror the second, will rule the land of India. A brave Rule.</li>
+<li>Luxury will enter into there hearts; riches around and they will loose [ignore] the Usmani (Ottoman) way.</li>
+</ol>
+<p>
+Page-34
+</p>
+
+<ol class="org-ol">
+<li>They will rule India, Bengal, Kashmir and the Bhopal State for 300 years.</li>
+<li>Their Empire will have access (influence) even in km, Bulkh, Bokhara and Tehran. Then they will vanish and shall be forgotten.</li>
+<li>In India and in Iran, 7 generations (of moguls) will rule and then will vanish and disappear from the scene.</li>
+<li>0 the one who is being addressed, you will not see the rule of Moguls beyond 300 years. They will vanish like the “people of the Kahaf’ [People of the Cave] (39)</li>
+<li>Then will come the last Era of this world and the eagles of Sidra will be wasted by the hands of the death.</li>
+<li>Those warriors, Rajas &amp; Maharajas [rulers] will take drugs and will get stoned. And the Christians will enter in their realms by posing merchants.</li>
+<li>They will loose their Kingship. Those who will come as guests will become the masters and will issue currency/coin of non-Indian rule.</li>
+</ol>
+<p>
+Page-35
+</p>
+
+<ol class="org-ol">
+<li>0 the one being addressed, you will see the Christians on the throne of the Indian kings. They will arrest the Muslims by false claims and through wicked tricks.</li>
+<li>You should know that their rule would be for 100 years. 0 friends, I have seen this secret.</li>
+<li>Islam and Muslims will be surprised and unable to do anything. Bulkh, Bokhara, Tehran, Sind and all India as well.</li>
+<li>Indians will read English Knowledge in schools and colleges. They will ignore and the Islamic knowledge.</li>
+<li>Then will come a war in which Russians and Japanese will take part. Japanese will be the victors (40)</li>
+</ol>
+<p>
+————————————————————————-
+</p>
+
+
+<p>
+(39) Points(111-121): Mogals (Mughals) ruled India and some other nations for a long time and then their empire vanished. Their children were killed and the English invaders destroyed their families and virtues. British East India co. entered in India in the guise of traders. Slowly, they bribed the officials to get more and more access and power. Then they formed their own Castles and their own army and started invading different cities and states. Finally in 1857, they got hold of the throne of India. England ruled India for approx. 100 years. In those hundred years, the western knowledge replaced Indian sciences. Rajas/Maharajas ruled in more than 50 states. All of them lost their kingdom. – MC
+(40) Russo-Japanese War (1904-05), a military conflict in which a victorious Japan forced Russia to abandon its expansionist policy in the Far East, becomes the first Asian power in modern times to defeat a European power. The Russo-Japanese War developed out of the rivalry between Russia and Japan for dominance in Korea and Manchuria.–MC
+————————————————————————-
+</p>
+
+<ol class="org-ol">
+<li>They will be like the kings in a Chess game. Both players expansion will be unbalanced [on weak foundations]. Mediators will negotiate truce.</li>
+<li>They will agree and fix the borderlines, will stop the war but the Agreement will be hypocritical.</li>
+</ol>
+<p>
+Page-36
+</p>
+
+<ol class="org-ol">
+<li>Russians will rule the Koh-Kaaf (a mountain range); also Kawarzam and Khewa will be conquered.</li>
+<li>Will gain access even to Egypt, Sudan, Bokhara, Kohistan, Lebanon, Karakh, and Constantinople.</li>
+<li>They will conquer up to the Sea of Khazar, Gailan. Through wickedness they will gain access to China and to the throne of Iran.</li>
+<li>There will be a King in Muslims called Abdul Hameed. Like Iranian Kings, he will be a just one.(41)</li>
+<li>In support of Islam he will stand up and struggle. After him, will come average sultan.(42)</li>
+<li>Christians will attack him from all the sides and will get access to his land using tricks and wickedness.</li>
+<li>After Hameed, the Sultan shall be Shah Khamis (or Fifth with the same name or title). He will sit on the throne unexpectedly.(43)</li>
+</ol>
+<p>
+Page-37
+</p>
+
+<ol class="org-ol">
+<li>The Deniers will rule East and West. When this will come true. (44)</li>
+<li>There will be a mass murder in the Jungle of Marv [or Maroo], people will be killed. They will conquer Turkish lands.</li>
+<li>The Second largest mass murder will occur in that era. Apparently the deniers will be victorious.</li>
+<li>Then at last, the friend of the Allah, the Conqueror, will take his sword out. (45)</li>
+<li>A new Life will run into Muslims, They will have the upper hand and you will see the nation of Uthman (ottomans or usmani) rejoicing.</li>
+<li>The Plague and famine will appear in the lands of India, so Muslims will the at many places.</li>
+<li>An earthquake, like the quack of the judgment day will occur. The 2/3 of Japan will be destroyed.</li>
+</ol>
+
+<p>
+———————————————————————-
+(41) Ottoman Emperor Abdul Hamid II (1876-1909) – MC
+(42) ‘Amiana’ is Original word used in qaseeda. It has several meanings. Common, normal, cheap, average. – MC
+(43) Muhammad V or Mehmed V (1909-1918) – MC
+(44) Point 132 onwards: Probably these events are yet to occur. – MC
+(45) ‘Habeeb-Ullah’ is the original word use in Qaseeda. It means ‘friend of Allah’ – MC
+————————————————————————
+Page-38
+</p>
+
+<ol class="org-ol">
+<li>Two persons with the name Ahmad will misguide a lot of people. They will interpret Al-Quran at will.(i.e. misinterpret) (46)</li>
+<li>There will be a war for 4 years on Western continent (Europe). Aleph (inglistan i.e. England) will cunningly win the war against Geem (Germany).(47)</li>
+<li>This will be the first Great War. Mass murder will take place. 10.3 million lives will be lost.</li>
+<li>They will reach a truce agreement but this truce will not be a permanent one.</li>
+<li>Both the parties will silently manufacture weapons. That is Geem (Germany) and Aleph (England) will prepare for war.</li>
+<li>When Japan will fight against China, Christians will fight with each other.</li>
+<li>His first attack will be on France. British and Italians will also be in the state of war.</li>
+</ol>
+<p>
+Page-39
+</p>
+
+<ol class="org-ol">
+<li>Thus the Second Great war will start after 21 years. This will be fierce and aggressive than the first</li>
+</ol>
+<p>
+war. (48)
+</p>
+<ol class="org-ol">
+<li>Indians will also aid in this war. They will be unaware of the fact that this aid will be useless.</li>
+<li>Weapons equal to the effect of lightening and of mass destructions will be manufactured by the famous scientists of that era.</li>
+<li>O the one who is addressed, if you are living in the east you’ll hear the talk of the west.(49) The voices from the unseen places will be heard.</li>
+<li>Both the Alephs (Inglistan and America), Russia and China will join hands together and will attack Aleph (Italia), Geem (Germany) and Second Geem (Japan) (50)</li>
+<li>This war will continue for about 6 years. Will be bitter than the salty water and will be like a jungle crowded with wild beasts.</li>
+<li>After that Christians will leave India. But before doing so, they will sow the seeds of wickedness (malice).(51)</li>
+</ol>
+<p>
+————————————————————————————–
+(46) Mirza Ghulam Ahmad of Qadian (1835 -1908) and his eldest son Mirza Basheer-ud-Din Mahmood Ahmad (1889-1965). Mirza claimed to be Mujadid, Mahdi and Jesus. His son was his Second Khalifa (Successor). Both of them wrote many books and misinterpreted Al-Quran. – MC
+<b>**</b>
+Dr. Allama Iqbal also mentioned two false prophets in his book Javed Nama 
+(1) Mirza Ghulam Ahmad Qadiani (1838) (2) Mirza Hussain Ali Baha Ullah (1817)
+(Read 3rd stanza of Poem here Khatab Ba Javed. Its from Book Javed Nama.
+<b>**</b>
+(47) History: WWI (1914-1918)
+(48) History: WWII (1939-1945)
+(49) Telecommunication, Radio – MC
+(50) In Persian and in Urdu language, Alphabet ‘I’ sometimes has the similar sound of Alphabet ‘Aleph or A’ and is written in this matter. Similarly ‘G or J’ has similar sound of ‘Alphabet Geem’. – MC
+(51) Hatred in Hindus and Muslims. Unresolved status of Kashmir and some other areas etc. – MC
+———————————————————————————–
+Page-40
+</p>
+
+<ol class="org-ol">
+<li>When this good news will spread, people from different places will get together at Bab-e-Aali *.</li>
+</ol>
+<p>
+(*Bab-e-Aali may be a place in Lahore named now Bab-e-Pakistan near Walton Cantt, A place where biggest refugees camp was built in Lahore. Writer Mumtaz Mufti also mentioned this camp in his book Alakh Nagri)
+</p>
+
+<ol class="org-ol">
+<li>India will be divided into two parts. Sadness and Sorrow will result from the cunning and deceit.(52)</li>
+<li>Kings without crown will rule Indo-pak.(53) They will issue orders without knowledge. Statements will be ambiguous.</li>
+<li>(Officials) will show laziness after taking bribes, they will knowingly ignore the issues. Will change the king’s orders.</li>
+<li>Knowledgeable people will mourn and the wise will mourn over the knowledge and wisdom they have. Fools will be naked, busy dancing and listening songs.</li>
+<li>Kind hearts will turn cold and respect will turn into boldness. All this will occur because of the evil of that time.</li>
+<li>They will commit the crime of incest. Sister with brother, boy with his mother and father with his daughter.</li>
+</ol>
+<p>
+Page-41
+</p>
+
+<ol class="org-ol">
+<li>Sarkar Muhammad S.A.W.’s nation will commit such criminal and disgusting acts.</li>
+<li>Evil and bad acts will spread everywhere. Even mother will cheat his daughter.</li>
+<li>Those misled Muftis (clerics) will issue baseless decrees. Will try to twist the orders of Sharia (Islamic law)</li>
+<li>Sinners will become the elders of their nation. So its house of wise will be deserted.</li>
+<li>People in cities and in mountains, will fearlessly consume drinks in summer and will take drugs.</li>
+<li>Like a candle, the orders of Islam will meltdown and vanish. Person with knowledge will be considered foolish and the people without knowledge will be revered.</li>
+<li>Those scholars of the earth will be arrogant (proud). They will decorate their unclean face with high turbans.(54)</li>
+</ol>
+<p>
+Page-42
+</p>
+
+<ol class="org-ol">
+<li>Will decorate them by wearing high turbans and fancy robes. This is equal to hiding the golden calf of Samir the magician under their clothing. (55)</li>
+<li>Muslims, in their weakness, will find reasons and logics for their wrong behaviors.</li>
+<li>Will forget what is halal and what is haram.(56) Because of kidnappings and rapes, women loose their dignity and respect.</li>
+</ol>
+
+<p>
+——————————————————————————
+(52) India divided into India and Pakistan in 1947. A mass murder of Muslim immigrants took place. – MC
+(53) Presidents, prime ministers – MC
+(54) Wearing Turban was the sign of respected ones / elders. – MC
+(55) Samir (Samari Jadugar) the Magician made a Golden Calf during the Prophet Moses’ (A.S.) seclusion. The Jews worshipped that idol. Samir’s calf is a sign of hypocrisy and a sign of disbelief in God! – MC
+(56) Halal- allowed, haram-forbidden things and actions – MC
+—————————————————————————–
+</p>
+
+<ol class="org-ol">
+<li>Hatred will appear; women will be without veil, will look innocent but in reality, are prostitutes.</li>
+<li>Some people will sell their daughters and act as pimps. Base and mean people will have attire of honored and pure ones.</li>
+<li>Some people will not have any shame or respect for privacy. Mothers will compare themselves with their daughters.</li>
+<li>Deniers will suggest Islam to Muslims. Stopping them from performing pilgrimage and stopping them to say their daily prayers.</li>
+</ol>
+<p>
+Page-43
+</p>
+
+<ol class="org-ol">
+<li>In India, like Satan, a man from Turkish lineage will tell big lies.</li>
+<li>Judges will be at the height of foolishness; scholars with great knowledge will take bribes.</li>
+<li>Good advices will vanish, and you’ll see that Governments will be formed through deceit and through lies.</li>
+<li>Hypocrisy will spread in the east and in the west, in all four directions. Common people will accept the widespread evil and sins.</li>
+<li>You’ll not see anyone defending the truth. They will honor the thieves and robbers.</li>
+<li>Lies, hypocrisy, backbiting and all other sins will spread everywhere. Murders, adultery and homosexuality will spread at many places.</li>
+<li>Sheikhs (teachers) will give satanic suggestions. They will sit in their homes with their lovers.</li>
+</ol>
+<p>
+Page-44
+</p>
+
+<ol class="org-ol">
+<li>Pious will obey Satan; scholars will be the enemies of God. Worshippers will forsake worship and saints will be hypocrites.</li>
+<li>The customs and rituals of the Christians (57) will be adopted everywhere. Innovations (in religion and traditions) will spread. Sunnah of the Prophet (the way of the Prophet) will disappear.</li>
+<li>If you give few coins of silver to a judge, he will change his decision like the dog of a hunter.</li>
+<li>A group will take interest over the loans. May God damn such people, sitting on an enormous wealth.</li>
+<li>Muslims will be ignoring their prayers. Will be the prisoners in the world of lust. This will happen in the world.</li>
+<li>Fasting, prayers and obedience will disappear suddenly. Zikr and religious chants will be hypocritical.</li>
+<li>Fondness of Prayers, fasting, Hajj, and Charity will decrease. Feel like a burden to their hearts.</li>
+</ol>
+<p>
+Page-45
+</p>
+
+<ol class="org-ol">
+<li>Suddenly Muslims will hear a noise.(58) They will fight fearlessly with the deniers.</li>
+</ol>
+<p>
+—————————————————————————-
+(57) It seems that to Naimat Shah, every westerner is a Christian. Amazingly accurate description of today’s world. The western culture, clothing, language, traditions etc. are spreading like a wild fire. Just look around in your countries. Another gift / curse of globalization to mankind. – MC
+(58) History: According to Hafiz Nizami, this stanza refers to Indo-Pak war of 1965 in which Indians lost and finally agreed to Tashkent Declaration.
+—————————————————————————-
+</p>
+
+<ol class="org-ol">
+<li>Sword of success in hands, they will fight with the enemy until they win by the grace of Allah.</li>
+<li>Hellish people will run away from the heart of Punjab (Khem Karan). Muslims will control the city.</li>
+<li>All the deniers will reach an agreement of unity and they will defeat the Muslims by force.(59)</li>
+<li>Hindu Banya (60) (money-Lender) will be the flag-bearer of India. Denier will pass away in his state of denial.</li>
+<li>After the war of 17 days, after many sacrifices and fighting, the Ghazis will be successful.(61)</li>
+<li>At the time of anxiety and depression, Allah will be merciful towards Muslims</li>
+</ol>
+<p>
+Page-46
+</p>
+
+<ol class="org-ol">
+<li>Muslims will force the leader to step down, after that Muslims will face a degrading defeat.(62)</li>
+<li>With great sadness, I am advising you to refrain from the ways of the priests.</li>
+<li>A great wrath will come upon those who deserve the punishment. Finally Allah will order a great punishment.</li>
+<li>Muslims will loose their lives; loose their strength, through the hands of a Hindu nation carrying weapons.(63)</li>
+<li>Eastern Part will be destroyed through the deception of the wicked. Western part will mourn over these cruel actions.</li>
+<li>Lives of Muslims will be cheaper than property and the blood of Muslims will run like a deep ocean.</li>
+<li>A big city will become a great slaughterhouse. Like Karbala, every house will experience great suffering.(64)</li>
+<li>The Leader of Muslims will be the friend of the enemy.(65) He will help them by keeping his promise.</li>
+<li>The one whose name’s first letter is ‘Ga’ and this name will have 6 letters; will surely be a victor through the cunning and wickedness.(66)</li>
+</ol>
+<p>
+———————————————————————————
+</p>
+
+<p>
+(59) Maybe a reference to Tashkent Declaration – MC
+</p>
+
+<p>
+(60) Lal Bahadur Shastri (1904-1966), Third Prime minister of India. He passed away shortly after the defeat in the war – MC
+(61) Indo-Pak was of 1965 lasted exactly 17 days. – MC
+(62) President Ayub Khan, who fought the 1965 was, was forced to step down. Muslims lost eastern Province of Bengal in 1971. -MC
+(63) A reference to Indian funded ‘Mukti-Bahni’ organization. This organization committed a genocide of Muslims in 1970-1971 – MC
+(64) A reference to Dhaka. Now the capital of Bangladesh. – MC
+(65) General yahya an, then president of Pakistan was a well-known traitor – MC
+(66) Name was Gandhi. With 6 letters in both English and Urdu/Persian language. Indra Gandhi was the prime minister of India at the time of 1971 war – MC
+——————————————————————————
+Page-47
+</p>
+
+<ol class="org-ol">
+<li>This incident will happen in between the two Eid festivals when the Sun will be at 50 degree and moon will be traveling through Sharteen. At that time, Hindu will win over the bad men (67)</li>
+<li>Muslims will acquire weapons in the month of Muharram. They will take bold steps then.(68)</li>
+<li>After that a revolt will appear in India. Chaos will spread in the land of deniers.</li>
+<li>Idol-worshippers will then be cruel towards the Muslims. Muslims will stay patient in front of Hindu wrath and anger.</li>
+<li>Muslims of western part will be blessed by God’s mercy and there will appear serious people.</li>
+<li>Help will come from the Northeast part to pave the way for victory.</li>
+<li>An army of warriors well versed with weaponry will come and add a great strength to Muslims.
+Page-48</li>
+
+<li>Turkish, Arabs, Iranians and people of Middle East will come fast with the intentions to help.</li>
+<li>People from mountains and forests will come too. A flood of fire in all directions.</li>
+<li>Chitral (69), Nanga Parbat (70), Gilgat (71) near china, and Tibet (72) will become the war ground.</li>
+<li>Turkish, Chinese and Iranians will unite together and they will conquer India.(73)</li>
+<li>Like an army of ants, they will conquer India in no time. I sware by the Almighty Allah that Muslim nation will be the victor.</li>
+<li>People of Kabul will come out to fight the deniers. The deniers will try to present excuses.</li>
+<li>The earth will shake by the march of the Ghazis of Sarhad. To reach their goal, they will come fast.</li>
+</ol>
+
+<p>
+Page-49
+</p>
+<ol class="org-ol">
+<li>The common people and the officials will get together. In his work, there will be hundred kinds of sorrows.(74)</li>
+</ol>
+<p>
+————————————————————————————
+(67) History: ‘Sheen’ stands for ‘Shams’ (Sun). ‘Noon’ is 50″ ‘ degree in astrological than. Sharteen is Moon’s first manzil in astrological than. Moon of the 2 day. This incident happened on November 22, 1971 when Yahya Khan was the President of Pakistan.
+</p>
+
+<p>
+(68) In my opinion 204-onwards are the predictions of future war in India and Pakistan – and Allah knows best – MC
+(69) A valley in northern areas of Pakistan – MC
+(70) A mountain range in the northern area of Pakistan – MC
+(71) A valley in northern Area – MC
+(72) Tibet is part of china now a days – MC
+(73) New alliances will be formed and this shall be the beginning of the WWIII. – And Allah knows best  – MC
+(74) Referring to someone whose actions will result into many sad events – MC
+———————————————————————————-
+</p>
+<ol class="org-ol">
+<li>This event will take place after the Eid Qurban and before the Eid-ul-Fitr’s prayers. They will acquire back the lost territory, which will be occupied by the enemy.</li>
+<li>3 times, the river of Attock will run with the blood of the deniers.</li>
+<li>Punjab, City of Lahore, State of Kashmir, Do-Aab (Ganga-Jamna rivers), city of Bijnor, will be captured by the Muslims.</li>
+<li>Beautiful girls and lovely sweethearts will be among the spoils of war for the Mujahids.</li>
+<li>After this, the deniers will fully loose the war. The brave army will be happy and shall be victorious.</li>
+<li>This battle will last for around 6 months. By the grace of Almighty God, Muslims will be the victors.</li>
+<li>By the grace of God, Muslims will be very happy. Such will be shower of the blessings of God.</li>
+</ol>
+<p>
+Page-50
+</p>
+
+<ol class="org-ol">
+<li>The people of bad intentions for faith and for the religion will have lost their lives. All the India will be cleansed from the Hindu rituals (traditions).</li>
+<li>An earthquake like the quack of the judgment day will occur. This earthquake will be the wrath on Hind (India) and Sindh (a province of Pakistan).</li>
+<li>Like India, the west too will have bad luck. The Third Great War will begin.</li>
+<li>Out of Two Alephs (England and America), one Aleph will be destroyed. ‘Ra’ (Russia) will attack the Aleph of the west.</li>
+<li>The defeated ‘Geem’ (Germany or Japan) will become equal to (or unite with) the ‘Ra'(Russia). Very dangerous, hellish weaponry of fire will be used.</li>
+<li>‘Ra’ (Russia) will be destroyed by the anger and wrath of ‘Seen’ (China). Russia will save itself from china by cunning tricks.</li>
+<li>Aleph (75) shall be destroyed to an extent that not a single dot of it will remain. Only its name and description will remain in the history books.</li>
+</ol>
+<p>
+Page-51
+</p>
+
+<ol class="org-ol">
+<li>This is the divine punishment for them and they will be given the title of ‘criminals’. None will dare raise head like priests do.</li>
+<li>These dishonest people ruined their lives. Finally they dwell in the hell.</li>
+<li>Those secrets that I narrated, those pearls that have handed over, are like the divine certificates. I described them because Allah surely will help Muslims.</li>
+<li>O the one being addressed, if you want Allah’s help then follow the sacred word and Allah’s friends.</li>
+</ol>
+
+<p>
+——————————————————————
+(75) According to Hafiz Nizami, Aleph stands for England – MC
+</p>
+
+<p>
+——————————————————————
+</p>
+
+<ol class="org-ol">
+<li>Until the best year</li>
+</ol>
+<p>
+Approaches. Imam Mehdi R.A. The guided one will rise.
+</p>
+
+<ol class="org-ol">
+<li>Suddenly, during the days of Hajj, Imam Mahdi r.a. Will appear. News of his appearance will spread in the world.</li>
+</ol>
+<p>
+Page-52
+</p>
+
+<ol class="org-ol">
+<li>After that the Denier Anti-Christ (Dajjal) will appear from the city of Asfahan. Prophet Isa (A.S.) (Jesus/Yesu/Yeshua) will return to destroy the antichrist.</li>
+<li>0 Naimat Shah, Be silent! Don’t reveal the secrets of Allah. I am describing these events in the year</li>
+</ol>
+<p>
+(Year 548 A.H. ) 
+-THE END-
+</p>
+
+<p>
+(Page 52 – Page-55)
+The knowledge of Walis
+Unable to translate because the language used is too complex and the terms are old and obscure.
+My knowledge of the spiritual realms and grip on this language is not enough to translate this passage.
+</p>
+
+<p>
+(Page 56)
+ Hafiz Muhammad Sarwar Nizami educated by Hazrat Amanat Ali Shah Chishti Nizami (R.A.) of Mughalpura Lahore, Pakistan.
+Other details on this page, praising H.M Sarwar Nizami’s efforts to compile this book
+-THE END OF THE BOOK-
+</p>
+
+<p>
+Share this:
+</p>
+
+<p>
+Click to share on Facebook (Opens in new window)Click to share on Twitter (Opens in new window)Click to share on LinkedIn (Opens in new window)Click to share on Tumblr (Opens in new window)Click to share on WhatsApp (Opens in new window)Click to share on Telegram (Opens in new window)Click to share on Reddit (Opens in new window)Click to share on Skype (Opens in new window)Click to share on Pinterest (Opens in new window)Click to share on Pocket (Opens in new window)
+</p>
+
+<p>
+Related
+</p>
+
+<p>
+Saffron
+September 28, 2016
+</p>
+
+<p>
+Iran – “Wipe Saudi Arabia Out Of Existence”
+September 29, 2016
+With 1 comment
+</p>
+
+<p>
+Kalagnanam
+October 1, 2016
+Posted in Uncategorized	
+Post navigation
+Previous postIran – “Wipe Saudi Arabia Out Of Existence”
+Next postKalagnanam
+Leave a Reply
+</p>
+
+<p>
+facebook twitter instagram 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2f6859e" class="outline-2">
+<h2 id="org2f6859e"><span class="section-number-2">3</span> Sri Veerabrahmendra the Precursor of Kalki English book</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+<a href="https://www.scribd.com/doc/49630026/Sri-Veerabrahmendra-the-Precursor-of-Kalki">https://www.scribd.com/doc/49630026/Sri-Veerabrahmendra-the-Precursor-of-Kalki</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org09781a0" class="outline-2">
+<h2 id="org09781a0"><span class="section-number-2">4</span> Kali-yugam Intro</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Kali-yuga, the Age of Quarrel, is a period of time lasting 432,000 year
+K
+</p>
+
+<p>
+Kalagnanam Visesha Vakyalu Devotional Album Lord Veera Brahmam Kalagnanam - <a href="https://www.youtube.com/watch?v=ijbhi-yiGcc">https://www.youtube.com/watch?v=ijbhi-yiGcc</a>
+</p>
+
+<p>
+Before study we need to know little understand vedic cosmology and vedic astrology and jothisya sastra 
+need to know about 
+</p>
+</div>
+<div id="outline-container-org44cebea" class="outline-3">
+<h3 id="org44cebea"><span class="section-number-3">4.1</span> how to create janma-kundali (birth chart and jatha-kam, lagna-kundali) :</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+<a href="https://www.youtube.com/watch?v=1p-E5r5r16A">https://www.youtube.com/watch?v=1p-E5r5r16A</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgca639c9" class="outline-3">
+<h3 id="orgca639c9"><span class="section-number-3">4.2</span> Lunar Months(Masa):</h3>
+<div class="outline-text-3" id="text-4-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">English Month</th>
+<th scope="col" class="org-left">Telugu Month</th>
+<th scope="col" class="org-left">Telugu Pronunciation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">March/April</td>
+<td class="org-left">చైత్రము</td>
+<td class="org-left">Chaithramu</td>
+</tr>
+
+<tr>
+<td class="org-left">April/May</td>
+<td class="org-left">వైశాఖము</td>
+<td class="org-left">Vaisaakhamu</td>
+</tr>
+
+<tr>
+<td class="org-left">May/June</td>
+<td class="org-left">జ్యేష్ఠము</td>
+<td class="org-left">Jyeshtta</td>
+</tr>
+
+<tr>
+<td class="org-left">June/July</td>
+<td class="org-left">ఆషాఢము</td>
+<td class="org-left">Aashaadhamu</td>
+</tr>
+
+<tr>
+<td class="org-left">July/August</td>
+<td class="org-left">శ్రావణము</td>
+<td class="org-left">Sraavanamu</td>
+</tr>
+
+<tr>
+<td class="org-left">August/September</td>
+<td class="org-left">భద్రపదము</td>
+<td class="org-left">Bhaadhrapadamu</td>
+</tr>
+
+<tr>
+<td class="org-left">September/October</td>
+<td class="org-left">ఆశ్వయుజము</td>
+<td class="org-left">Aasveeyujamu</td>
+</tr>
+
+<tr>
+<td class="org-left">October/November</td>
+<td class="org-left">కార్తికము</td>
+<td class="org-left">Kaarthikamu</td>
+</tr>
+
+<tr>
+<td class="org-left">November/December</td>
+<td class="org-left">మార్గశిరము</td>
+<td class="org-left">Maargaseershamu</td>
+</tr>
+
+<tr>
+<td class="org-left">December/January</td>
+<td class="org-left">పుష్యము</td>
+<td class="org-left">Pushyamu</td>
+</tr>
+
+<tr>
+<td class="org-left">January/February</td>
+<td class="org-left">మాఘము</td>
+<td class="org-left">Maakhamu</td>
+</tr>
+
+<tr>
+<td class="org-left">February/March</td>
+<td class="org-left">ఫాల్గుణము</td>
+<td class="org-left">Phaalgunamu</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org4d47b1a" class="outline-3">
+<h3 id="org4d47b1a"><span class="section-number-3">4.3</span> 60 year samvatsar cycles</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+These 60 Samvatsaras repeats in a cycle of 12 years. The significator of the year is Shani, Saturn, which takes approximately 30 years to complete the entire twelve signs of the zodiac.
+The yugas of periods began when both Jupiter and Saturn were at 0-degree of Aries. 
+So, if we take the lowest common multiple between the motion of Jupiter and Saturn (approximately 12 years and 30 years), we get the count of 60.
+</p>
+
+<p>
+Therefore, every 60 years, both Jupiter and Saturn reach the 0-degree of Aries, and this interplay between both the planets, the angles formed, the influences that arise due to the combination, significantly affect the Samvatsaras and the individuals.
+</p>
+
+<p>
+The sixty Samvatsaras (Prabhava to Kshaya) are divided into three groups of 20 Samvatsaras,
+</p>
+<ul class="org-ul">
+<li>first group of 20 Samvatsaras (Prabhava to Vyaya) is assigned to Lord Brahma,</li>
+<li>the next group of 20 Samvatsaras (Sarvajit to Parabhava) to Lord Vishnu,</li>
+<li>the last 20 (Plavanga to Kshaya) to Lord Shiva.</li>
+</ul>
+
+<p>
+There is other difference in vedic calander based on 
+earth wobble movement :earth axis or north-pole does not matches druva nakshatra and it complete once circle for every 26,000 years 
+</p>
+</div>
+
+<div id="outline-container-org39078c9" class="outline-4">
+<h4 id="org39078c9"><span class="section-number-4">4.3.1</span> Names of samvatsaras</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">S. No</th>
+<th scope="col" class="org-left">Telugu Year Name</th>
+<th scope="col" class="org-left">Falling Years</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">Prabhava</td>
+<td class="org-left">1867, 1927, 1987, 2047</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">Vibhava</td>
+<td class="org-left">1868, 1928, 1988, 2048</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">Shukla</td>
+<td class="org-left">1869, 1929, 1989, 2049</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">Pramodyutha</td>
+<td class="org-left">1870, 1930, 1990, 2050</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">Prajothpathhi</td>
+<td class="org-left">1871, 1931, 1991, 2051</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-left">Angeerasa</td>
+<td class="org-left">1872, 1932, 1992, 2052</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-left">Shreemukha</td>
+<td class="org-left">1873, 1933, 1993, 2053</td>
+</tr>
+
+<tr>
+<td class="org-right">8</td>
+<td class="org-left">Bhaava</td>
+<td class="org-left">1874, 1934, 1994, 2054</td>
+</tr>
+
+<tr>
+<td class="org-right">9</td>
+<td class="org-left">Yuva</td>
+<td class="org-left">1875, 1935, 1995, 2055</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-left">Dhatha</td>
+<td class="org-left">1876, 1936, 1996, 2056</td>
+</tr>
+
+<tr>
+<td class="org-right">11</td>
+<td class="org-left">Eashwara</td>
+<td class="org-left">1877, 1937, 1997, 2057</td>
+</tr>
+
+<tr>
+<td class="org-right">12</td>
+<td class="org-left">Bhahudhanya</td>
+<td class="org-left">1878, 1938, 1998, 2058</td>
+</tr>
+
+<tr>
+<td class="org-right">13</td>
+<td class="org-left">Pramadi</td>
+<td class="org-left">1879, 1939, 1999, 2059</td>
+</tr>
+
+<tr>
+<td class="org-right">14</td>
+<td class="org-left">Vikrama</td>
+<td class="org-left">1880, 1940, 2000, 2060</td>
+</tr>
+
+<tr>
+<td class="org-right">15</td>
+<td class="org-left">Vrusha</td>
+<td class="org-left">1881, 1941, 2001, 2061</td>
+</tr>
+
+<tr>
+<td class="org-right">16</td>
+<td class="org-left">Chitrabhanu</td>
+<td class="org-left">1882, 1942, 2002, 2062</td>
+</tr>
+
+<tr>
+<td class="org-right">17</td>
+<td class="org-left">Swabhanu</td>
+<td class="org-left">1883, 1943, 2003, 2063</td>
+</tr>
+
+<tr>
+<td class="org-right">18</td>
+<td class="org-left">Thaarana</td>
+<td class="org-left">1884, 1944, 2004, 2064</td>
+</tr>
+
+<tr>
+<td class="org-right">19</td>
+<td class="org-left">Paarthiva</td>
+<td class="org-left">1885, 1945, 2005, 2065</td>
+</tr>
+
+<tr>
+<td class="org-right">20</td>
+<td class="org-left">Vyaya</td>
+<td class="org-left">1886, 1946, 2006, 2066</td>
+</tr>
+
+<tr>
+<td class="org-right">21</td>
+<td class="org-left">SarvaJithhu</td>
+<td class="org-left">1887, 1947, 2007, 2067</td>
+</tr>
+
+<tr>
+<td class="org-right">22</td>
+<td class="org-left">Sarvadhaari</td>
+<td class="org-left">1888, 1948, 2008, 2068</td>
+</tr>
+
+<tr>
+<td class="org-right">23</td>
+<td class="org-left">Virodhi</td>
+<td class="org-left">1889, 1949, 2009, 2069</td>
+</tr>
+
+<tr>
+<td class="org-right">24</td>
+<td class="org-left">Vikruthi</td>
+<td class="org-left">1890, 1950, 2010, 2070</td>
+</tr>
+
+<tr>
+<td class="org-right">25</td>
+<td class="org-left">Khara</td>
+<td class="org-left">1891, 1951, 2011, 2071</td>
+</tr>
+
+<tr>
+<td class="org-right">26</td>
+<td class="org-left">Nandana</td>
+<td class="org-left">1892, 1952, 2012, 2072</td>
+</tr>
+
+<tr>
+<td class="org-right">27</td>
+<td class="org-left">Vijaya</td>
+<td class="org-left">1893, 1953, 2013, 2073</td>
+</tr>
+
+<tr>
+<td class="org-right">28</td>
+<td class="org-left">Yaja</td>
+<td class="org-left">1894, 1954, 2014, 2074</td>
+</tr>
+
+<tr>
+<td class="org-right">29</td>
+<td class="org-left">Manmadha</td>
+<td class="org-left">1895, 1955, 2015, 2075</td>
+</tr>
+
+<tr>
+<td class="org-right">30</td>
+<td class="org-left">Durmukhi</td>
+<td class="org-left">1896, 1956, 2016, 2076</td>
+</tr>
+
+<tr>
+<td class="org-right">31</td>
+<td class="org-left">Hevalambhi</td>
+<td class="org-left">1897, 1957, 2017, 2077</td>
+</tr>
+
+<tr>
+<td class="org-right">32</td>
+<td class="org-left">Vilambhi</td>
+<td class="org-left">1898, 1958, 2018, 2078</td>
+</tr>
+
+<tr>
+<td class="org-right">33</td>
+<td class="org-left">Vikari</td>
+<td class="org-left">1899, 1959, 2019, 2079</td>
+</tr>
+
+<tr>
+<td class="org-right">34</td>
+<td class="org-left">Sharvari</td>
+<td class="org-left">1900, 1960,2020, 2080</td>
+</tr>
+
+<tr>
+<td class="org-right">35</td>
+<td class="org-left">Plava</td>
+<td class="org-left">1901, 1961, 2021, 2081</td>
+</tr>
+
+<tr>
+<td class="org-right">36</td>
+<td class="org-left">Shubhakruthu</td>
+<td class="org-left">1902, 1962, 2022, 2082</td>
+</tr>
+
+<tr>
+<td class="org-right">37</td>
+<td class="org-left">Shobhakruthu</td>
+<td class="org-left">1903, 1963, 2023, 2083</td>
+</tr>
+
+<tr>
+<td class="org-right">38</td>
+<td class="org-left">Krodhi</td>
+<td class="org-left">1904, 1964, 2024,2084</td>
+</tr>
+
+<tr>
+<td class="org-right">39</td>
+<td class="org-left">Vishvavasu</td>
+<td class="org-left">1905, 1965, 2025, 2085</td>
+</tr>
+
+<tr>
+<td class="org-right">40</td>
+<td class="org-left">Parabhava</td>
+<td class="org-left">1906, 1966, 2026, 2086</td>
+</tr>
+
+<tr>
+<td class="org-right">41</td>
+<td class="org-left">Plavanga</td>
+<td class="org-left">1907, 1967, 2027, 2087</td>
+</tr>
+
+<tr>
+<td class="org-right">42</td>
+<td class="org-left">Keelaka</td>
+<td class="org-left">1908, 1968, 2028, 2088</td>
+</tr>
+
+<tr>
+<td class="org-right">43</td>
+<td class="org-left">Sowmya</td>
+<td class="org-left">1909, 1969, 2029, 2089</td>
+</tr>
+
+<tr>
+<td class="org-right">44</td>
+<td class="org-left">Sadharana</td>
+<td class="org-left">1910, 1970, 2030, 2090</td>
+</tr>
+
+<tr>
+<td class="org-right">45</td>
+<td class="org-left">Virodhikruthu</td>
+<td class="org-left">1911, 1971, 2031, 2091</td>
+</tr>
+
+<tr>
+<td class="org-right">46</td>
+<td class="org-left">Pareedhavi</td>
+<td class="org-left">1912, 1972, 2032, 2092</td>
+</tr>
+
+<tr>
+<td class="org-right">47</td>
+<td class="org-left">Pramadeecha</td>
+<td class="org-left">1913, 1973, 2033, 2093</td>
+</tr>
+
+<tr>
+<td class="org-right">48</td>
+<td class="org-left">Aananda</td>
+<td class="org-left">1914, 1974, 2034, 2094</td>
+</tr>
+
+<tr>
+<td class="org-right">49</td>
+<td class="org-left">Rakshasa</td>
+<td class="org-left">1915, 1975, 2035, 2095</td>
+</tr>
+
+<tr>
+<td class="org-right">50</td>
+<td class="org-left">Nala</td>
+<td class="org-left">1916, 1976, 2036, 2096</td>
+</tr>
+
+<tr>
+<td class="org-right">51</td>
+<td class="org-left">Pingala</td>
+<td class="org-left">1917, 1977, 2037, 2097</td>
+</tr>
+
+<tr>
+<td class="org-right">52</td>
+<td class="org-left">Kalayukthi</td>
+<td class="org-left">1918,1978, 2038, 2098</td>
+</tr>
+
+<tr>
+<td class="org-right">53</td>
+<td class="org-left">Sidhharthi</td>
+<td class="org-left">1919, 1979, 2039, 2099</td>
+</tr>
+
+<tr>
+<td class="org-right">54</td>
+<td class="org-left">Roudri</td>
+<td class="org-left">1920, 1980, 2040, 2100</td>
+</tr>
+
+<tr>
+<td class="org-right">55</td>
+<td class="org-left">Durmathi</td>
+<td class="org-left">1921, 1981, 2041, 2101</td>
+</tr>
+
+<tr>
+<td class="org-right">56</td>
+<td class="org-left">Dundubhi</td>
+<td class="org-left">1922, 1982, 2042, 2102</td>
+</tr>
+
+<tr>
+<td class="org-right">57</td>
+<td class="org-left">Rudhirodhari</td>
+<td class="org-left">1923, 1983, 2043, 2103</td>
+</tr>
+
+<tr>
+<td class="org-right">58</td>
+<td class="org-left">Rakthakshi</td>
+<td class="org-left">1924, 1984, 2044, 2104</td>
+</tr>
+
+<tr>
+<td class="org-right">59</td>
+<td class="org-left">Krodhana</td>
+<td class="org-left">1925, 1985, 2045, 2105</td>
+</tr>
+
+<tr>
+<td class="org-right">60</td>
+<td class="org-left">Akshaya</td>
+<td class="org-left">1926, 1986, 2046, 2106</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org43fa077" class="outline-4">
+<h4 id="org43fa077"><span class="section-number-4">4.3.2</span> Influence of samvatsar on birth</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<p>
+<a href="https://www.clickastro.com/blog/hindu-calendar-characteristics-of-people/">https://www.clickastro.com/blog/hindu-calendar-characteristics-of-people/</a>
+</p>
+
+
+<p>
+Indian Astrology
+Samvatsaras: The Meaning &amp; Its Importance in Vedic Astrology
+Date: April 9, 2021 Author: Clickastro
+hindu calendar
+Lord Prajapati or Brahma is known to be the embodiment of Samvatsara that is widely used to explore a different segment of time like day, ritus (seasons), Ayana, and Month masa.
+</p>
+
+<p>
+The term “Samvatsara” is a Sanskrit word for ‘year’ in the Vedic literature. It roughly means a period of one full year sidereal when the Sun enters the sign of Aries. Some astrologers define it as the time in which Brihaspati (planet Jupiter) with its average speed crosses the journey of one zodiac sign and moves on to the next. According to this definition, when Jupiter completes the entire circle of traversing all 12 zodiac signs, it comprises 12 Samvatsaras. During the entire journey, Jupiter is either close by or far from planet Earth based on which it creates positive or negative influences for an individual.
+</p>
+
+<p>
+The Hindu calendar has a cycle of 60 years and is named from Prabhava to Kshaya. Generally, the new Hindu year begins at the end of April every year. In the current cycle, the year Prabhava coincides with the Christian year 1987.
+</p>
+
+<p>
+indepth horoscope
+These 60 Samvatsaras repeats in a cycle of 12 years. The significator of the year is Shani, Saturn, which takes approximately 30 years to complete the entire twelve signs of the zodiac. The yugas of periods began when both Jupiter and Saturn were at 0-degree of Aries. So, if we take the lowest common multiple between the motion of Jupiter and Saturn (approximately 12 years and 30 years), we get the count of 60.
+</p>
+
+<p>
+Therefore, every 60 years, both Jupiter and Saturn reach the 0-degree of Aries, and this interplay between both the planets, the angles formed, the influences that arise due to the combination, significantly affect the Samvatsaras and the individuals.
+</p>
+
+<p>
+Get your FREE Kundli with remedies
+</p>
+
+<p>
+The sixty Samvatsaras (Prabhava to Kshaya) are divided into three groups of 20 Samvatsaras each wherein the first group of 20 Samvatsaras (Prabhava to Vyaya) is assigned to Lord Brahma, the next group of 20 Samvatsaras (Sarvajit to Parabhava) to Lord Vishnu, and the last 20 (Plavanga to Kshaya) to Lord Shiva.
+</p>
+
+<p>
+Check Your Free Astrology Online
+</p>
+
+<p>
+Samvatsara from 1900 AD to 2020 AD
+A chart showing the Hindu years (Samvatsara) from the Christian era 1900 to 2020 is given below:
+</p>
+
+<p>
+1900 	Sarvari 	1900 	Sarvari
+1901 	Plava 	1901 	Plava
+1902 	Subhakritu 	1902 	Subhakritu
+1903 	Sobhakritu 	1903 	Sobhakritu
+1904 	Krodhi 	1904 	Krodhi
+1905 	Viswavasu 	1905 	Viswavasu
+1906 	Parabhava 	1906 	Parabhava
+1907 	Plavanga 	1907 	Plavanga
+1908 	Keelaka 	1908 	Keelaka
+1909 	Soumya  	1909 	Soumya 
+1910 	Sadharana 	1910 	Sadharana
+1911 	Virodhikritu 	1911 	Virodhikritu
+1912 	Paridhavi 	1912 	Paridhavi
+1913 	Pramodisha 	1913 	Pramodisha
+1914 	Ananda 	1914 	Ananda
+1915 	Rakshasa 	1915 	Rakshasa
+1916 	Nala 	1916 	Nala
+1917 	Pingala 	1917 	Pingala
+1918 	Kalyukti 	1918 	Kalyukti
+1919 	Saddhartha 	1919 	Saddhartha
+1920 	Roudri 	1920 	Roudri
+1921 	Durmathi 	1921 	Durmathi
+1922 	Dundubhi 	1922 	Dundubhi
+1923 	Rudhirodgari 	1923 	Rudhirodgari
+1924 	Rakthkashi 	1924 	Rakthkashi
+1925 	Krodhana 	1925 	Krodhana
+1926 	Kshaya 	1926 	Kshaya
+1927 	Prabhava 	1927 	Prabhava
+1928 	Vibhava 	1928 	Vibhava
+1929 	Sukla 	1929 	Sukla
+1930 	Pramodhati 	1930 	Pramodhati
+1931 	Prajothpati 	1931 	Prajothpati
+1932 	Angirasa 	1932 	Angirasa
+1933 	Srimukha 	1933 	Srimukha
+1934 	Bhava 	1934 	Bhava
+1935 	Yuva 	1935 	Yuva
+1936 	Dhatu 	1936 	Dhatu
+1937 	Eswara 	1937 	Eswara
+1938 	Bahudanya 	1938 	Bahudanya
+1939 	Pramadi 	1939 	Pramadi
+1940 	Vikrama 	1940 	Vikrama
+1941 	Vriksha 	1941 	Vriksha
+1942 	Chitrabhanu 	1942 	Chitrabhanu
+1943 	Swabhanu 	1943 	Swabhanu
+1944 	Tharana 	1944 	Tharana
+1945 	Parthiva 	1945 	Parthiva
+1946 	Vyaya 	1946 	Vyaya
+1947 	Sarvajitu 	1947 	Sarvajitu
+1948 	Sarvadhari 	1948 	Sarvadhari
+1949 	Virodhi 	1949 	Virodhi
+1950 	Vikriti 	1950 	Vikriti
+1951 	Khara 	1951 	Khara
+1952 	Nandana 	1952 	Nandana
+1953 	Vijaya 	1953 	Vijaya
+1954 	Jaya 	1954 	Jaya
+1955 	Manmatha 	1955 	Manmatha
+1956 	Durmukhi 	1956 	Durmukhi
+1957 	Hevimbi 	1957 	Hevimbi
+1958 	Vilambi 	1958 	Vilambi
+1959 	Vikari 	1959 	Vikari
+The Samvatsara for this year is known as Sharvari (also called Zarvari or Sarvari). Each Samvatsara carries a particular essence that is correlated with its Sanskrit name along with its group ruler. The Samvatsara for this 2020-2021 year is the fourth in a group of five years ruled by the Manes.
+</p>
+
+<p>
+career horoscope
+The Manes are of two types: and are the children of Lord Brahma, also known as the Prajatis, who’re great rishis, progenitors, and protectors of the planet Earth, the animal kingdom, and the entire human race. Often called “Ancestors”, they inhabit their region between the realms of the human race (mankind) and the Gods, a place known as “Pitraloka”.
+</p>
+
+<p>
+The word Sharvari means “night or twilight” or “pernicious or murderous” depending on the context with which we look at it. However, if we go by the ancestral predictions, this year is known to bring famine and trouble and that we are already seeing in the form of COVID-19 virus outbreak across the globe or in the form of locust plague spread out in parts of Africa. So, it won’t be wrong to say that the current five-year cycle ruled by the Manes (2017 – 2022) is challenging and a period of calamity for the human race.
+</p>
+
+<p>
+Even in the last Sharvari cycle (during 1960) the human race experienced a similar case without the outbreak of the Great Chinese famine from 1959 – 1961.
+</p>
+
+<p>
+Download Your Free Marriage Prediction
+</p>
+
+<p>
+Influence of year of birth
+No. 	Names of Divisions 	Explanation
+1 	Prabhava 	A person born in this year will have a collection of precious things, have good children, and will live long and happy.
+2 	Vibhava 	This person will be born rich and will be a person of artistic talents. They will become learned.
+3 	Shukla 	The person born this year will be very handsome will enjoy good family life and will be of great character. 
+4 	Pramodhati 	Those born in this year will be helpful, famous, and well-honored in life.
+5 	Prajothpati 	Those born in this year will be honest, will help society, and will be respected by others.
+6 	Angirasa 	The person born this year will be proud, enjoy good luck, and will have male children.
+7 	Srimukha 	The person of this year will be very intelligent. They will learn many sciences and will be very successful in life.
+8 	Bhava 	People born this year will enjoy a good life, earn fame, and will help others generously.
+9 	Yuva 	The person of this year will have a brilliant countenance and will be successful and enjoy a long life.
+10 	Dhathu 	Those born in this year will be successful in business enterprises, will be proficient in winning over enemies, and will not be spendthrift.
+11 	Eswara 	Those born in this year will be short-tempered, proficient in many vocations, and will have a good personality.
+12 	Bahudanya 	Those born in this year will be successful in military science and will be associated with vehicles.
+13 	Pramadi 	Those born in this year will be successful in business and agriculture.
+14 	Vikrama 	Those born in this year will achieve great success in life and will be courageous.
+15 	Vriksha 	People born in this year will be slow in doing things, maybe lazy and will mostly serve others as servants.
+16 	Chitrabhanu 	People born in this year will have high principles, enjoy great intelligence, and will be learned.
+17 	Swabhanu 	Those born in this year will be liked by those in power and will be powerful, fearless and at times may commit bad deeds.
+18 	Tharana 	Those born in this year will have a fickle mind. Bad deeds done by them may bring a bad name.
+19 	Parthiva 	Those who are born this year will be lucky, will enjoy a good position in life, and will have for company powerful and influential people.
+20 	Vyaya 	Those born in this year will be poor and may migrate from their home country to settle abroad.
+21 	Sarvajitu 	Those born in this year are hard workers with many interests and possible success in sciences.
+22 	Sarvadhari 	Those born in this year will have many servants, lead a life of luxury, and will enjoy life to the full.
+23 	Virodhi 	Those born in this year will travel much and will face great opposition in life.
+24 	Vikriti 	The person born in this year may be lean and dark in complexion with a defective limb and a heartless attitude at times.
+25 	Khara 	The person born in this year will have lung trouble and will be passionate.
+26 	Nandana 	Those born in this year will be happy and content.
+27 	Vijaya 	The person born in this year will be learned and will have a highly logical mind and will be respected by others.
+28 	Jaya 	The person born in this year will enjoy success and will be of great valor.
+29 	Manmatha 	Those born in this year will be rich, enjoy female company, and will acquire precious articles.
+30 	Durmukhi 	Those born in this year will be harmful, will keep company with women in the lower rungs of the society and have vulgar speech.
+31 	Hevimbi 	The person born in this year will be rich, enjoy possessions, lead a comfortable life, and will have good character.
+32 	Vilambi 	Those born in this year may tend to be greedy, lazy, and stingy.
+33 	Vikari 	The person born in this year will be fickle-minded, unwise, suffer from false pride, and may do anything for self-gratification.
+34 	Sarvari 	Those born in this year are passionate, sexually active, and incapable of doing anything on their own.
+35 	Plava 	Those born in this year will be indecisive in their day-to-day life and may keep wandering from place to place.
+36 	Subhakritu 	The person of this year is always a principled one bent on doing good to others. He will also learn many sciences and live long.
+37 	Sobhakritu 	
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orge3ad6e2" class="outline-3">
+<h3 id="orge3ad6e2"><span class="section-number-3">4.4</span> Estimate start of kali-yuga lord sri krihsna leaves earth</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+kali Yuga started just over approx 5,000 years ago in 3102 and 3113 B.C.E BCE   when Krishna left our planet Earth which was calculated by famous scholars 
+There are two estimation that is 0th Kali-yuga is either 
+</p>
+<ul class="org-ul">
+<li>3042 BC or</li>
+<li>3102 BC.</li>
+</ul>
+<p>
+Present Kali yuga year is (3102BCE +2021AC= 5124 kaliyuga)  (3042 + 2021= 5063 kaliyuga)
+Kali Yuga, the fourth age in a cycle, lasts for 
+</p>
+<ul class="org-ul">
+<li>432,000 (human-solar) years</li>
+<li>1,200 divine years  (1 divine year = 360 solar (human) year or 6-cycles samvatsar</li>
+</ul>
+
+<p>
+Kali-yuga consist of 3 parts 
+</p>
+<ul class="org-ul">
+<li><b>Part-I</b> : <b>kali-yuga-sandhya</b> (dawn)       [3102BC-32,899CE]  36,000 solar year or   100 divine years</li>
+<li><b>Part-I</b> : <b>kali-yuga</b>                   [32,899CE-392,899CE] 360,000 solar year or 1,000 divine years</li>
+<li><b>Part-I</b> : <b>kali-yuga-sandhyams</b> (dusk) [392,899CE-428,899CE]  36,000 solar year or  1000 divine years</li>
+</ul>
+
+<p>
+Presently we are in part- I of kali yugam 
+</p>
+</div>
+
+<div id="outline-container-orgf88e116" class="outline-4">
+<h4 id="orgf88e116"><span class="section-number-4">4.4.1</span> Estimate start of kaliyuga from kalagnana prophecies:</h4>
+<div class="outline-text-4" id="text-4-4-1">
+<ul class="org-ul">
+<li>In 5098  Kaliyuga to   price of rice is 2 grains per rupee
+<ul class="org-ul">
+<li>Assume start of kaliyuga 3012BC then  
+<ul class="org-ul">
+<li>5098 −3102= 1996 : if we assume that start of kaliyuga  is at 3102BC then  in 1996(5098 kaliyuga) price of rice should be Rs 1/  per 2 grains which is false according to data.</li>
+</ul></li>
+<li>if assume there a 60 year life cycle difference then bc should be  estimate start of kaliyuga 3102 - 60 = 3042 BC
+<ul class="org-ul">
+<li>then 5098 kaliyuga will be (2056 + 3042)  which support  above prophecies</li>
+</ul></li>
+</ul></li>
+
+<li>From Bhahudhanya Naam Samvatsaras : next 14 years there will be many catastopies seviour drouth and floods., bload bath,and seviour wars will happen, and many destructions will  occure.
+<ul class="org-ul">
+<li>Bhahudhanya 1878, 1938, 1998, 2058</li>
+<li>Estimate (2058-2072)</li>
+<li>Assume that 2072 is end of 5118 of kaliyuga and 1/7 population survived the start of kaliyuga will be 5118 (2072 + 3046BC) or
+<ul class="org-ul">
+<li>start of kaliyuga 5118-2072 = 3046BC (which aprroximate over assuption but for perfect  match we need to see at 3046 BC is Prabhava nama samvatsar which is wrong)</li>
+</ul></li>
+<li>Assume that  kaliyuga start at 3042BC then 5118 kaliyuga (2076) then  which match that 3032BC is Prabhaba nama samvatsar 
+<ul class="org-ul">
+<li>From Estimate 2058-2072 pralays and war can happen</li>
+<li>by 2076 world population will be 1/7 which satisfies both</li>
+</ul></li>
+</ul></li>
+
+<li>From Eashwara Naam Samvatsar to end of Vikrama Naam Samavatsaras  1 out of 7 villages and 1 out of 7 houses will survive  
+<ul class="org-ul">
+<li>Vikrama 	1880, 1940, 2000, 2060</li>
+</ul></li>
+<li>In  end of 5118 kaliyuga 1/7 world population will survive there is other prophecies
+<ul class="org-ul">
+<li>(start of kaliyuga) + 2060 &lt;= 5118  = = &gt; star of kaliyuga &lt;= 3058 BC</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org79bd595" class="outline-3">
+<h3 id="org79bd595"><span class="section-number-3">4.5</span> Visualistaion or grahical understanding of vedic-cosmology, vedic astrologi, and hindu-lunar calander using stal</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+Geocentric Movement of the Solar System and the Hindu Solar Calendar <a href="https://www.youtube.com/watch?v=Q8T_ytDT280">https://www.youtube.com/watch?v=Q8T_ytDT280</a>
+Geocentric Movement of the Solar System and the Hindu Lunar Calendar <a href="https://www.youtube.com/watch?v=hnmfuTxgDa4">https://www.youtube.com/watch?v=hnmfuTxgDa4</a>
+Moon phases from the ground and space <a href="https://www.youtube.com/watch?v=VfBreeZEDN4">https://www.youtube.com/watch?v=VfBreeZEDN4</a>
+Stellarium: Displaying and selecting constellations <a href="https://www.youtube.com/watch?v=kGe91uymh04">https://www.youtube.com/watch?v=kGe91uymh04</a> 
+Note : we can get vedic named stars from earth pint of view 
+</p>
+
+<p>
+jyothisha  playlist : <a href="https://www.youtube.com/playlist?list=PLLZzwykvkseJ9ZTGLaXHEbW5eFEVgSfwF">https://www.youtube.com/playlist?list=PLLZzwykvkseJ9ZTGLaXHEbW5eFEVgSfwF</a>
+Consist of How to calculate Tithis using nakshatra, 12 rasi, 12 masa  and calculate lunar masa, reason for adhika masa, what is uttarayana/dakshinayana , rtus, difference between druva nakshatra and nort-pole: wooble movement : advantage and disadvanges taking wobble effect on vedic date-time caluclation repeat cycle at 26,000 years    
+</p>
+
+<p>
+27 nakshatra + 1 abhijit nakshatra 
+12 rashis :
+12 masa (lunar):
+adhika masa : to match lunar-solar calander 
+<a href="https://www.youtube.com/watch?v=cMTvzvMnsnQ&amp;list=PLLZzwykvkseJ9ZTGLaXHEbW5eFEVgSfwF&amp;index=4">https://www.youtube.com/watch?v=cMTvzvMnsnQ&amp;list=PLLZzwykvkseJ9ZTGLaXHEbW5eFEVgSfwF&amp;index=4</a>
+</p>
+
+<p>
+Western Astrology :
+Birth Chart: Identifying the Basic Components <a href="https://www.youtube.com/watch?v=-4vNK05bEjo">https://www.youtube.com/watch?v=-4vNK05bEjo</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=dTxQ4o8a2MU">https://www.youtube.com/watch?v=dTxQ4o8a2MU</a>
+Vedic Astrology (Jyothisha Sastra)
+Journey into Jyotisha Sastra with Shri. PVR Narasimha Rao 
+Vedic Astrology Encyclopedia written by Father of Vasa (Parasar )  father of Jyotish Shastra or Vedic Astrology 
+why parasar muni is know as father of Jyothish Sastra <a href="https://vedicfeed.com/maharishi-parashara/">https://vedicfeed.com/maharishi-parashara/</a>
+</p>
+
+<p>
+download Epic-Brihat-Parasar-Hora-Shastram-Astrology(hindi)  <a href="https://www.dwarkadheeshvastu.com/Epic-Brihat-Parasar-Hora-Shastram-Astrology.aspx">https://www.dwarkadheeshvastu.com/Epic-Brihat-Parasar-Hora-Shastram-Astrology.aspx</a>
+</p>
+
+
+<p>
+Kundli kaise dekhe PART-65 "नक्षत्र" महा ज्योतिष की और पहला कदम || महा ज्योतिष विज्ञान || Astrology <a href="https://www.youtube.com/watch?v=ICPl-xIGWvI">https://www.youtube.com/watch?v=ICPl-xIGWvI</a>
+Here abhijit nakastra is described and which place should we palace in nakastra-chat
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdabee01" class="outline-3">
+<h3 id="orgdabee01"><span class="section-number-3">4.6</span> Rasi and Nakshatra</h3>
+<div class="outline-text-3" id="text-4-6">
+<p>
+nakshata (and 4 part know as pada) and rasi (affinity: air,water, fire,earth) <a href="https://www.youtube.com/watch?v=FA9C8YmMFlY">https://www.youtube.com/watch?v=FA9C8YmMFlY</a>
+rasi : 12      angle : 360/12 = 90/3 = 30
+Nakshatra: 27  angle : 360/27 = 40/3 = 13. 20' <a href="https://blog.indianastrologysoftware.com/nakshatras-in-astrology/">https://blog.indianastrologysoftware.com/nakshatras-in-astrology/</a>
+28th nakshata : abhijit 
+gcp : 108
+</p>
+<ul class="org-ul">
+<li>27*4=108</li>
+<li>So Each Nakastra is divided into pada consisting of 4 part and angle between each part angle= 360/108 = 10/3 = 3.20'</li>
+<li></li>
+</ul>
+<p>
+each  nakshatra are dividied into 4 part is know as pada 
+</p>
+
+<p>
+4 part of 1/108 will be nakshatra
+9 part of 1/108 will be rasi 
+</p>
+
+<p>
+Kundli kaise dekhe PART-65 "नक्षत्र" महा ज्योतिष की और पहला कदम || महा ज्योतिष विज्ञान || Astrology <a href="https://www.youtube.com/watch?v=ICPl-xIGWvI">https://www.youtube.com/watch?v=ICPl-xIGWvI</a>
+Here abhijit nakastra is described and which place should we palace in nakastra-chat
+</p>
+
+<p>
+jyothisa imp points 
+<a href="http://www.hinduscriptures.com/vedic-sciences/nakshatra-vedic-astrology/2313/">http://www.hinduscriptures.com/vedic-sciences/nakshatra-vedic-astrology/2313/</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org95dd157" class="outline-2">
+<h2 id="org95dd157"><span class="section-number-2">5</span> EMACS vedic solar-lunar clander</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+<a href="https://babbagefiles.blogspot.com/2010/12/hack-emacs-calendar-indiannepalihindu.html">https://babbagefiles.blogspot.com/2010/12/hack-emacs-calendar-indiannepalihindu.html</a>
+</p>
+
+<p>
+<a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Sunrise_002fSunset.html">https://www.gnu.org/software/emacs/manual/html_node/emacs/Sunrise_002fSunset.html</a>
+move to other calander like : Julian, HEBREWM ISLAMIC French Chinese calendar Persia Coptic Ethipic mayan calander 
+<a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/From-Other-Calendar.html">https://www.gnu.org/software/emacs/manual/html_node/emacs/From-Other-Calendar.html</a>
+</p>
+
+<p>
+Phase of Moon <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Lunar-Phases.html">https://www.gnu.org/software/emacs/manual/html_node/emacs/Lunar-Phases.html</a>
+</p>
+
+<p>
+source code of chinese-calendar.el <a href="https://github.com/hick/emacs-chinese/blob/master/chinese-calendar.el">https://github.com/hick/emacs-chinese/blob/master/chinese-calendar.el</a>
+<a href="http://web.mit.edu/Emacs/source/emacs-23.1/lisp/calendar/cal-china.el">http://web.mit.edu/Emacs/source/emacs-23.1/lisp/calendar/cal-china.el</a>
+</p>
+
+
+
+<p>
+how to activate chinese-calendar
+</p>
+</div>
+</div>
+<div id="outline-container-orga0aac7b" class="outline-2">
+<h2 id="orga0aac7b"><span class="section-number-2">6</span> Python code</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+<a href="https://stackoverflow.com/questions/6502966/calculating-lunar-lunisolar-holidays-in-python">https://stackoverflow.com/questions/6502966/calculating-lunar-lunisolar-holidays-in-python</a>
+</p>
+
+<p>
+How to Calculate the Phase of the Moon - Amy "SailorHG" Wibowo | JSConf Hawaii 2019 <a href="https://www.youtube.com/watch?v=JybbgAz3meQ">https://www.youtube.com/watch?v=JybbgAz3meQ</a>
+</p>
+
+<p>
+chinese cli :
+<a href="https://raw.githubusercontent.com/wolfhong/LunarCalendar/master/generate.html">https://raw.githubusercontent.com/wolfhong/LunarCalendar/master/generate.html</a>
+</p>
+
+
+<p>
+Astroniz : nasa database + nasa methods 
+<a href="https://www.youtube.com/channel/UCvuCPVj5zTjxdR-EcatFfUg/videos">https://www.youtube.com/channel/UCvuCPVj5zTjxdR-EcatFfUg/videos</a>
+</p>
+
+
+<p>
+Simulating a real solar system with 70 lines of Python code : <a href="https://medium.com/analytics-vidhya/simulating-the-solar-system-with-under-100-lines-of-python-code-5c53b3039fc6">https://medium.com/analytics-vidhya/simulating-the-solar-system-with-under-100-lines-of-python-code-5c53b3039fc6</a>
+</p>
+
+<p>
+Visual Python Planetary Orbits <a href="https://www.youtube.com/watch?v=iHy2cB-jIaQ&amp;t=332s">https://www.youtube.com/watch?v=iHy2cB-jIaQ&amp;t=332s</a>
+Vpython can be used for show or present 3d solar planaotry motion 
+<a href="https://www.youtube.com/playlist?list=PLdCdV2GBGyXOnMaPS1BgO7IOU_00ApuMo">https://www.youtube.com/playlist?list=PLdCdV2GBGyXOnMaPS1BgO7IOU_00ApuMo</a>
+</p>
+
+
+<p>
+Kundli kaise dekhe PART-65 "नक्षत्र" महा ज्योतिष की और पहला कदम || महा ज्योतिष विज्ञान || Astrology <a href="https://www.youtube.com/watch?v=ICPl-xIGWvI">https://www.youtube.com/watch?v=ICPl-xIGWvI</a>
+Here abhijit nakastra is described and which place should we palace in nakastra-chat
+</p>
+</div>
+</div>
+<div id="outline-container-org85b8349" class="outline-2">
+<h2 id="org85b8349"><span class="section-number-2">7</span> Kalagnana</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+<a href="https://archive.org/details/KalagnanamBookTeluguTotal">https://archive.org/details/KalagnanamBookTeluguTotal</a>
+</p>
+
+<p>
+Kalagnanam was written in Telugu Language and ‘Sandra Sindhu Veda’ on palm leaves, and Sri Veera Brahmendra Swamy’s sayings and ballads are being sung by wandering minstrels and mendicants. 
+They are in the oral tradition. Most of his predictions have come true and rest is yet to come true. 
+It is stated that Kalagnanam of the entire World contains 3,32,000 volumes. 
+</p>
+<ul class="org-ul">
+<li>A small part of Kalagnanam is available in Brahmamgari Matham at Kandimallayapalle, Siddhayyagari Matham at Mudumala, Rangarajugari Matham at Nagaripadu,</li>
+<li>and the remaining major part is kept in the inner pit of Banaganapalle Mutt under tamarind sprout which has grown into a big tree now.</li>
+</ul>
+
+<p>
+Sri Veera Brahmendra Swamy wrote in his Kalagnanam that he was incarnation of Lord Vishnu and 
+</p>
+<ul class="org-ul">
+<li>would come again as Lord Kalki/Lord Veera Bhoga Vasantha Raaya to restore dharma and peace on the earth.</li>
+<li>And devotees believe that he would rescue them whenever they plead him;</li>
+<li>and he will come out from the Jeeva Samadhi when the blood of thousands of people, who beheaded with frustration when the calamities reach peak stage, touches his Jeeva Samadhi.</li>
+<li>( It may be noted that like Lord Rama came to earth when Lord Parasurama is still in existence, Lord Veera Bhoga Vasantha Raaya came to earth while both Lord Parasurama and Lord Veera Brahmendra Swamy are still on the earth. )</li>
+<li>( The date of Sri Veera Brahmendra Swamy’s coming out from Jeeva Samadhi and of Lord Kalki/LordVeera Bhoga Vasantha Raaya is different).</li>
+</ul>
+
+<p>
+Samvatsaras: The Meaning &amp; Its Importance in Vedic Astrology
+<a href="https://www.clickastro.com/blog/hindu-calendar-characteristics-of-people/">https://www.clickastro.com/blog/hindu-calendar-characteristics-of-people/</a>
+</p>
+
+<p>
+Telugu or local calander : <a href="https://sakalam.org/telugu-year-names-english/">https://sakalam.org/telugu-year-names-english/</a>
+</p>
+
+
+<p>
+<a href="https://www.youtube.com/embed/FD0VQ0Jo_NU?start=2265">https://www.youtube.com/embed/FD0VQ0Jo_NU?start=2265</a>
+bagaladesh : people will sink and disintegrate in water. (either floods or rise in ocean leve) most probabiliy floods  
+</p>
+
+<p>
+For rise in sea leavel of bangalesh:  <a href="https://www.youtube.com/watch?v=DTQezhxW1Q4&amp;list=PL8GN8IgGxgFEpCl3uzyOd7cvk24ubBNqn&amp;index=78">https://www.youtube.com/watch?v=DTQezhxW1Q4&amp;list=PL8GN8IgGxgFEpCl3uzyOd7cvk24ubBNqn&amp;index=78</a> 
+Note : at 95meters rise in sea level total bangalesh will submerge
+Note : at 95 meter rise in sea level in pakistan : <a href="https://www.youtube.com/embed/kEnNrhPNQOs?start=53">https://www.youtube.com/embed/kEnNrhPNQOs?start=53</a>
+</p>
+
+<p>
+Due to  floods lot of cites will be
+Nellor will be submerged in water <a href="https://www.youtube.com/embed/Lyx-O7H8Syw?start=756">https://www.youtube.com/embed/Lyx-O7H8Syw?start=756</a> 
+</p>
+
+
+<p>
+World War :  <a href="https://www.youtube.com/embed/Lyx-O7H8Syw?start=976">https://www.youtube.com/embed/Lyx-O7H8Syw?start=976</a>
+in one month in adjust years 4 grahanamlu(sloar eclips or lunar eclipes) then in north india there will be earthquake 
+</p>
+
+<p>
+<a href="https://www.youtube.com/embed/VwGOH_c4OfQ?start=647">https://www.youtube.com/embed/VwGOH_c4OfQ?start=647</a> 
+In between Dhatha Naam Samvatsaras and Paarthiva Naam Samvatsaras all national leaders will do the war and many will be died.
+Dhatha Naam Samvatsaras :  1876, 1936, 1996, 2050
+Paarthiva Naam Samvatsaras: 1885, 1945, 2005, 2065
+</p>
+
+<p>
+<a href="https://www.youtube.com/embed/Lyx-O7H8Syw?start=1033">https://www.youtube.com/embed/Lyx-O7H8Syw?start=1033</a>
+In between Prabhava, Paarthiva  there will be many pralay's happening there after will be blood rivers and wars will happen all over the world
+</p>
+<ul class="org-ul">
+<li>in between prabhaba and paarthiva =  bhahudany will come</li>
+</ul>
+<p>
+there is chance of occuring world war -3 
+(1987-2005) or (2047-2065) + n.60 :
+</p>
+
+<p>
+Prabhava 	1867, 1927, 1987, 2047
+Paarthiva     1885, 1945, 2005, 2065   	
+</p>
+
+<p>
+War- I   1914-1918   40 million: estimates range from around 15 to 22 million deaths and about 23 million 
+War - II 1939-1945   70–85 million  
+Estimate : 
+Pralay : 1987-2005 :
+war-III  2058-2065
+</p>
+
+
+
+<p>
+may be world war II (1936-1945)
+</p>
+
+<p>
+<a href="https://www.youtube.com/embed/VwGOH_c4OfQ?start=692">https://www.youtube.com/embed/VwGOH_c4OfQ?start=692</a>
+In between bhaava and yuva nama samavtara in different states ther will be seviour ativrushti and anavrushti ( flood  drought)  and many Pralaya will happen
+Bhaava 	1874, 1934, 1994, 2054
+Yuva  	1875, 1935, 1995, 2055
+</p>
+
+
+<p>
+Note : Importance of bhahudnaya
+<a href="https://www.youtube.com/embed/VwGOH_c4OfQ?start=501">https://www.youtube.com/embed/VwGOH_c4OfQ?start=501</a> 
+</p>
+
+<p>
+From Bhahudhanya Naam Samvatsaras : next 14 years there will be many catastopies seviour drouth and floods., bload bath,and seviour wars will happen, and many destructions will  occure.
+</p>
+<ul class="org-ul">
+<li>Estimate (2058-2072)  as end of 5118 (2074 + 3044BC) there will be only 1/7 survive</li>
+</ul>
+<p>
+Bhahudhanya 	1878, 1938, 1998, 2058
+Dhatha 	1876, 1936, 1996, 2056
+</p>
+
+<p>
+Dhatha Naam Samvatsaras maga sudha Budhavāraṁ 18 town(cities) will destroy 
+Magh month or Magha masam is the 11 th month in Hindu calendar (February- March ) Budhavāraṁ(Wednesday) 
+Dhatha 	1876, 1936, 1996, 2056
+</p>
+
+
+<p>
+<a href="https://youtu.be/FD0VQ0Jo_NU?t=2428">https://youtu.be/FD0VQ0Jo_NU?t=2428</a>
+Bhahudhanya Naam Samvatsaras 25 Mega(Mahā) cites due to blood-bath will we destroied
+Bhahudhanya 	1878, 1938, 1998, 2058
+</p>
+
+
+
+
+<p>
+<a href="https://www.youtube.com/embed/VwGOH_c4OfQ?start=672">https://www.youtube.com/embed/VwGOH_c4OfQ?start=672</a>
+Between Bhahudhanya Naam Samvatsaras and Vikrama Naam Samavatsaras there will be many many serious war and many will die 
+Bhahudhanya	1878, 1938, 1998, 2058
+Vikrama 	1880, 1940, 2000, 2060
+</p>
+
+<p>
+may be world war II (1938-1945)
+</p>
+
+<p>
+<a href="https://www.youtube.com/embed/VwGOH_c4OfQ?start=714">https://www.youtube.com/embed/VwGOH_c4OfQ?start=714</a>
+At the end of  Bhahudhanya Naam Samvatsaras: 
+</p>
+<ul class="org-ul">
+<li>all jati(race,tribe, X[may not be caste(కులం) ]) will become one.</li>
+<li>the difference between rice, poor will be removed.</li>
+<li>In Palnati seema (Palnadu: Costal Andhra) there will many Conflicts</li>
+<li>Palnati people will eat leaves</li>
+<li>In Siddipet due to war lot of muslims will die.</li>
+<li>men will rome with out and mustaces</li>
+<li>For devotees, slaves, yogis there will be scarsity for shealter in the place</li>
+<li>In konaseema  conflicts will be born.</li>
+<li>సుఖవ్యాధి(sexually transmitted disease) will prevail (increase drastically)</li>
+<li>Bhahudhanya	1878, 1938, 1998, 2058</li>
+</ul>
+
+
+
+
+<p>
+<a href="https://www.youtube.com/embed/VwGOH_c4OfQ?start=765">https://www.youtube.com/embed/VwGOH_c4OfQ?start=765</a>
+In Pramadi Naam Samvatsaras due to vomiting and xxxxxx many people will die. 
+Pramadi 	1879, 1939, 1999, 2059
+</p>
+
+
+
+<p>
+Great ness of veera boga vasanta rayulu:
+</p>
+
+<p>
+In mysore (Chamundeshwari or Durga) will to the dance and kill all mayavadhi's
+kin's , brother, famil relationship will vanish
+mala madhigalu will be come landlords <a href="https://www.youtube.com/embed/VwGOH_c4OfQ?start=885">https://www.youtube.com/embed/VwGOH_c4OfQ?start=885</a>
+</p>
+
+<p>
+nastika(atheist=non-beivers of god) will be perished.
+astika (theist=belivers of god) will be respected.
+</p>
+
+<p>
+<a href="https://www.youtube.com/embed/VwGOH_c4OfQ?start=1015">https://www.youtube.com/embed/VwGOH_c4OfQ?start=1015</a>  
+There will be a country (desham)  born which is know as america and there will be many earthquake  will ocure 
+</p>
+
+
+<p>
+In kashi where will be floods due to which thousands of village will be destroied
+In trivani sagnamam due to floods 10,024 house(house) will be destroyed.
+</p>
+
+<p>
+<a href="https://youtu.be/FD0VQ0Jo_NU?t=1977">https://youtu.be/FD0VQ0Jo_NU?t=1977</a>
+kashi desam kalahalu(conflicts) palu avenu 
+</p>
+
+
+<p>
+<a href="https://www.youtube.com/embed/VwGOH_c4OfQ?start=1040">https://www.youtube.com/embed/VwGOH_c4OfQ?start=1040</a>
+In turkey due to huge cyclon lots of peopl will die 
+</p>
+
+<p>
+<a href="https://www.youtube.com/embed/VwGOH_c4OfQ?start=1045">https://www.youtube.com/embed/VwGOH_c4OfQ?start=1045</a>  
+Bhadrapada Masa(6th month of Hindu calendar  September 7 to October 6.) In Madhya dēśaṁ ( madhya pradesh or middle east arabic country)  there will be an earthquake at 4 am due to which 48 village will be destroy 
+</p>
+
+<p>
+Korukonda  Vizianagaram hanuman due to (Āgrahaṁ=Anger, choler, rage, wrath) will increase his size)
+"Orugallu" or  Warangal national treasure will be realived.
+</p>
+
+
+<p>
+<a href="https://www.youtube.com/embed/VwGOH_c4OfQ?start=1113">https://www.youtube.com/embed/VwGOH_c4OfQ?start=1113</a>
+Patala-ganga: under-water ground will be dried and from ground fire will be rise 
+</p>
+
+
+<p>
+Draviḍa dēśaṁ dagdhaṁ(will burned
+</p>
+
+
+<p>
+<a href="https://youtu.be/FD0VQ0Jo_NU?t=2415">https://youtu.be/FD0VQ0Jo_NU?t=2415</a>
+Bhaava Nama  Sraavana masa(July/August) due to heavy rise of water in rivers  many village and cites will be in water 
+Bhaava 	1874, 1934, 1994, 2054
+</p>
+
+
+<p>
+<a href="https://youtu.be/FD0VQ0Jo_NU?t=2304">https://youtu.be/FD0VQ0Jo_NU?t=2304</a>
+In 5098  Kaliyuga Dhatha Mārgaśira(August/September) to Eashwara  Māgha māsaṁ (January/February) 
+</p>
+<ul class="org-ul">
+<li>Golkonda, Vinukonda, Kondavedu, thadipatri, guthi, balari, nellore, mangalagiri, munimadugu, ethamukala, gunturu, Bezawada(Vijayawada),kamam, kurnool, markapuram, tanjauru, puspagiri, mysore, chenapatanam</li>
+<li>In these palace for  Rs 1/- price for rice is  2 grains(seeds) (price of rice will increase)</li>
+<li>Estimate start of kaliyuga from kalagnana prophecies:</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>In 5098  Kaliyuga to   price of rice is 2 grains per rupee 
+<ul class="org-ul">
+<li>(5098 −3000 = 2098 : rougf estimate so</li>
+<li>Assume start of kaliyuga 3012BC then  
+<ul class="org-ul">
+<li>5098 −3102= 1996 : if we assume that start of kaliyuga  is at 3102BC then  in 1996(5098 kaliyuga) price of rice should be Rs 1/  per 2 grains which is false</li>
+</ul></li>
+<li>if assume there a 60 year life cycle difference then bc should be  estimate start of kaliyuga 3102 - 60 = 3042 BC
+<ul class="org-ul">
+<li>then 5098 kaliyuga will be (2056 + 3042)  which support  above prophecies</li>
+</ul></li>
+</ul></li>
+
+<li>From Bhahudhanya Naam Samvatsaras : next 14 years there will be many catastopies seviour drouth and floods., bload bath,and seviour wars will happen, and many destructions will  occure.
+<ul class="org-ul">
+<li>Bhahudhanya 1878, 1938, 1998, 2058</li>
+<li>Estimate (2058-2072)</li>
+<li>Assume that 2072 is end of 5118 of kaliyuga and 1/7 population survived the start of kaliyuga will be 5118 (2072 + 3046BC) or
+<ul class="org-ul">
+<li>start of kaliyuga 5118-2072 = 3046BC</li>
+</ul></li>
+<li>Assume that  kaliyuga start at 3042BC then 5118 kaliyuga (2076) then 
+<ul class="org-ul">
+<li>From Estimate 2058-2072 pralays and war can happen</li>
+<li>by 2076 world population will be 1/7 which satisfies both</li>
+</ul></li>
+</ul></li>
+
+<li>From Eashwara Naam Samvatsar to end of Vikrama Naam Samavatsaras  1 out of 7 villages and 1 out of 7 houses will survive  
+<ul class="org-ul">
+<li>Vikrama 	1880, 1940, 2000, 2060</li>
+</ul></li>
+<li>In  end of 5118 kaliyuga 1/7 world population will survive there is other prophecies
+<ul class="org-ul">
+<li>(start of kaliyuga) + 2060 &lt;= 5118  = = &gt; star of kaliyuga &lt;= 3058 BC</li>
+</ul></li>
+</ul>
+
+
+<p>
+From Bhahudhanya Naam Samvatsaras : next 14 years there will be many catastopies seviour drouth and floods., bload bath,and seviour wars will happen, and many destructions will  occure.
+</p>
+<ul class="org-ul">
+<li>Estimate (2058-2072)  as end of 5118 (2072 + 3046BC) there will be only 1/7 survive</li>
+</ul>
+<p>
+Bhahudhanya 	1878, 1938, 1998, 2058
+Dhatha 	1876, 1936, 1996, 2056
+</p>
+
+<ul class="org-ul">
+<li>Estimated time  aug 2056  to  feb 2057</li>
+</ul>
+
+<p>
+Dhatha 	1876, 1936, 1996, 2056
+Eashwara 	1877, 1937, 1997, 2057
+</p>
+
+<p>
+<a href="https://youtu.be/FD0VQ0Jo_NU?t=3541">https://youtu.be/FD0VQ0Jo_NU?t=3541</a>
+Bhahudhanya Naam Samvatsaras  in banagaupally 5 years old nagaiya boy will read vedas without any one teaching him vedas then tiger will come to banagaupally and black face vanagrudu (half monkey and half man) will cicle around the village and leave 
+Bhahudhanya 	1878, 1938, 1998, 2058 
+</p>
+
+
+<p>
+<a href="https://youtu.be/FD0VQ0Jo_NU?t=3643">https://youtu.be/FD0VQ0Jo_NU?t=3643</a>
+In plavanga naama samvatsaram there will be elicpes where sun will be visible is shape of a ring   
+Plavanga 	1907, 1967, 2027, 2087
+</p>
+
+
+
+<p>
+<a href="https://www.youtube.com/watch?v=FD0VQ0Jo_NU&amp;t=2445s">https://www.youtube.com/watch?v=FD0VQ0Jo_NU&amp;t=2445s</a>
+From Eashwara Naam Samvatsar to end of Vikrama Naam Samavatsaras  1 out of 7 villages and 1 out of 7 houses will survive
+</p>
+<ul class="org-ul">
+<li>(Eashwara 2057 -  Vikrama 2060 )</li>
+<li>There is other estimate  end of 5118 kaliyuga 1/7 world population will survive</li>
+<li>Vikrama 	1880, 1940, 2000, 2060</li>
+<li>Estimate start of kaliyuga :  (start of kaliyuga) + 2060 &lt;= 5118  = = &gt; star of kaliyuga &lt;= 3058 BC</li>
+</ul>
+
+
+<p>
+<a href="https://www.youtube.com/embed/G68ngdKd7gU?start=766">https://www.youtube.com/embed/G68ngdKd7gU?start=766</a>
+Oh Great people at the end of  5118 Kaliyuga year  in the entire world only 1/7 of population will be survied
+</p>
+<ul class="org-ul">
+<li>Estimate (5118 -3042 = 2076, 5118 -3102 = 2016, 5118- 3058 = 2060)</li>
+<li>Estimate time 2060, 2076 (1/7th population survive)</li>
+</ul>
+
+<p>
+<a href="https://www.youtube.com/embed/G68ngdKd7gU?start=766">https://www.youtube.com/embed/G68ngdKd7gU?start=766</a>
+Oh Great people at the end of  5118 Kaliyuga year (2018 AC)  in the entire world only 1/7 of population will be survied 
+</p>
+
+<p>
+<a href="https://www.youtube.com/embed/G68ngdKd7gU?start=810">https://www.youtube.com/embed/G68ngdKd7gU?start=810</a>
+In Vijaya Naam Samavatsara  Ashada Masa Śud'dha<sub>Sapthami</sub>(17th Moon phase) i will give darshan to devotees and start dharma paripalana before that 1/7 of sinfull people will be perished.
+</p>
+<ul class="org-ul">
+<li>Estimate it will happen after 5118  when 1/7 population survives</li>
+<li>2073 + start of kaliyuga &lt;= 5118 =&gt; start of kaliyuga &lt; 3045</li>
+<li>Vijaya 	1893, 1953, 2013, 2073</li>
+<li>Estimated time 2073 (start of kaliyuga at 3058)</li>
+</ul>
+
+<p>
+<a href="https://www.youtube.com/embed/VwGOH_c4OfQ?start=1664">https://www.youtube.com/embed/VwGOH_c4OfQ?start=1664</a>
+After 5118 Kaliyuga year (2076)  before Aananda Naam Samvatsaras (2094): For 1 Pōka cekka (areca nut or beetel nut) you will get hand full of rice (పుట్టెడు బియ్యం).
+Meaning
+</p>
+<ul class="org-ul">
+<li>In between  2076 and 2094 due to war, famine, dought, flood there will be a seviour shotage of food
+<ul class="org-ul">
+<li>due to war lot of people will die (only 1/7 of world population will be alive) less demand for rice so  price of rice can be fall down</li>
+<li>there will be huge agriculture developement</li>
+<li>and over-rice production will occure due (less demand and high supply) the cost of rice will be reduced very low  and they will sell one hand full of rice for 1 beetel-nut(Rs 1)</li>
+<li>(5118 -30042 = 2076, 5118 -3102 = 2016)</li>
+<li>Aananda 	1914, 1974, 2034, 2094</li>
+<li>Estimated period 2016-2034 or  2076-2094</li>
+</ul></li>
+</ul>
+
+
+<p>
+<a href="https://youtu.be/FD0VQ0Jo_NU?t=3075">https://youtu.be/FD0VQ0Jo_NU?t=3075</a>
+From Bhahudhanya  to Nanadana  nama samvatsar :(2058-2072)
+ In srisailam  malikarjura temple smoke file will start and temple shikaram will be on fire and and fall on ground 
+</p>
+<ul class="org-ul">
+<li>Inside temple deitys will come life and dance from village to village then sinfull people start to fear.</li>
+<li>Lord Malikarjura will start to talk with people due to some people will die</li>
+<li>Due to rain of weapons many will die</li>
+</ul>
+
+<p>
+<a href="https://www.youtube.com/watch?v=FD0VQ0Jo_NU&amp;t=4924s">https://www.youtube.com/watch?v=FD0VQ0Jo_NU&amp;t=4924s</a>
+In khara nama samvatsar the Glories (Mahimalu) of me(sriman naranaya) will be know and entire world village and cites blood rain will fall 
+Khara 	1891, 1951, 2011, 2071
+</p>
+
+<p>
+<a href="https://youtu.be/FD0VQ0Jo_NU?t=5171">https://youtu.be/FD0VQ0Jo_NU?t=5171</a>
+From pashu nama samvatsar to  nandana nama samavatsara all water will dry
+Khara 	1891, 1951, 2011, 2071
+Nandana 	1892, 1952, 2012, 2072 
+</p>
+
+
+<p>
+<a href="https://www.youtube.com/embed/VwGOH_c4OfQ?start=1752">https://www.youtube.com/embed/VwGOH_c4OfQ?start=1752</a>
+Bezawada Indrakeela hill తొమ్మిది మూరల స్త్రీ (9 elite  స్త్రీ ) will be born and sinfull people shall be beheaded by holding there head.
+</p>
+
+<p>
+<a href="https://www.youtube.com/embed/VwGOH_c4OfQ?start=1761">https://www.youtube.com/embed/VwGOH_c4OfQ?start=1761</a>
+In Palnati seema Bhadra maha kaali shall be born and destroy all village and cites.
+</p>
+
+<p>
+Part 2 Volume-II 
+From village to village one shakti(energy) shall be born and it will cry like a goat(sheep) due to which some people will die.
+</p>
+
+<p>
+In mangalagiri mayavadhi's vaishnavas divide into two groups due to conflicts and fight each other and dies.
+Information about mangalagiri :<a href="https://www.mangalagiri.org/temple.html">https://www.mangalagiri.org/temple.html</a>
+</p>
+
+
+
+
+
+
+<p>
+Mandapaludu would talk with humans in Malayalam.
+</p>
+
+<p>
+Mandapaludu = <a href="https://www.wisdomlib.org/definition/mandapala">https://www.wisdomlib.org/definition/mandapala</a>
+<a href="https://www.timeforthought.net/2016/07/maha-bharata-some-hidden-gems-7.html">https://www.timeforthought.net/2016/07/maha-bharata-some-hidden-gems-7.html</a>
+<a href="https://www.vyasaonline.com/2017/01/17/sarangopakhyana-the-story-of-saranga-birds/mahabharata/">https://www.vyasaonline.com/2017/01/17/sarangopakhyana-the-story-of-saranga-birds/mahabharata/</a>
+</p>
+
+
+<p>
+<a href="https://youtu.be/FD0VQ0Jo_NU?t=1699">https://youtu.be/FD0VQ0Jo_NU?t=1699</a>
+In Malayalam there will be no more men  
+</p>
+
+
+
+<p>
+<a href="https://hindupad.com/macherla-chennakesava-swamy-temple-lakshmi-chennakeshava-swamy-temple/">https://hindupad.com/macherla-chennakesava-swamy-temple-lakshmi-chennakeshava-swamy-temple/</a>
+</p>
+
+<p>
+From Gandikota Muṇḍamōpulu(Muṇḍamōpulu Forearms ) persons will come to kurnool with madness 
+</p>
+
+
+<p>
+<a href="https://www.youtube.com/embed/G68ngdKd7gU?start=654">https://www.youtube.com/embed/G68ngdKd7gU?start=654</a>
+In nandana Naam Samavatsaras lot of stars(commets) will fall due to which earth will shake
+Nandana 	1892, 1952, 2012, 2072
+Estimate : 2072
+</p>
+
+
+<p>
+<a href="https://www.youtube.com/embed/G68ngdKd7gU?star=666">https://www.youtube.com/embed/G68ngdKd7gU?star=666</a>
+In Pingala Naam Samavatsaras Ghōramaina(Horrible, dreadful, terrible) will start and it will continous till Kalayukthi Naam Samavatsaras in (uttara desham )[approximate: north india or  uttar pradesh or  nothen country] 
+</p>
+
+<p>
+Pingala 	1917, 1977, 2037, 2097
+Kalayukthi 	1918,1978, 2038, 2098
+</p>
+
+<p>
+<a href="https://youtu.be/FD0VQ0Jo_NU?t=5888">https://youtu.be/FD0VQ0Jo_NU?t=5888</a>
+Aananda Naam Samvatsaras mārgaśira  bhalual asthami  guruvāraṁ srisailam Lord  malikarjura with goddess bramarammbha will vindya mountain
+</p>
+
+<p>
+mārgaśir: (November/December 9th month in hindu)
+aṣṭami  : eighth day after the new or full moon
+guruvāraṁ : Thursday
+</p>
+
+<p>
+Aananda 	1914, 1974, 2034, 2094 
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=FD0VQ0Jo_NU&amp;t=5900s">https://www.youtube.com/watch?v=FD0VQ0Jo_NU&amp;t=5900s</a>
+</p>
+
+<p>
+From Durmukhi Naama Samvatsara  Kaarthika sudha chaturthi  start with  suppressing sinful person  and goes to maha pralays
+This pralays will start at Roudri Naama Samvatsara Kaarthika masa 
+</p>
+<ul class="org-ul">
+<li>Kaarthika masa : October/November</li>
+<li>is the fourth day (Tithi) of both waxing and waning phase</li>
+<li>Durmukhi 	1896, 1956, 2016, 2076</li>
+<li>Roudri 	1920, 1980, 2040, 2100</li>
+<li>Estimate : 2076-2100  because supressing sinful person can't happen after 2016 (present timeline : because in future  adharma should increase war should happen  so it will happen after after 2076(5118 AK ) )</li>
+</ul>
+
+
+<p>
+108 years , 1000 years 
+jaya naama samvatsara(2016) āṣāḍhama sudha sampthami  give darsham to devotees and to darma-paripalana before that from 7 houses 6 house sinful persons will be destroyed
+24th year old rule 108 years and his descandes will rule 1000 years(2076 + 108 + 1000 = 3184 AC , 6226 kaliyuga) 
+</p>
+
+
+
+<p>
+2021-2060 <a href="https://www.youtube.com/watch?v=wfSaig_cg1g">https://www.youtube.com/watch?v=wfSaig_cg1g</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1d1b571" class="outline-2">
+<h2 id="org1d1b571"><span class="section-number-2">8</span> <a href="https://laxmimadhav.wordpress.com/2016/10/01/kalagnanam/">https://laxmimadhav.wordpress.com/2016/10/01/kalagnanam/</a></h2>
+<div class="outline-text-2" id="text-8">
+<ol class="org-ol">
+<li>India will participate in a war and the Indian Capital New Delhi will be bombed, in the year Krodhi (2024-25) the capital will be shifted from New Delhi to Anegondi (Near Hampi, Karnataka State). And in the same year i.e. Krodhi (2024-25), the Nellore region will be submerged.</li>
+
+<li>Hampi(Karnataka) may probably be destroyed by Nuclear Attack.</li>
+
+<li>A direct Disciple of Lord Parasurama and Acharya Nagarjuna, Sri Sanaari Visweswara and other Sidhdha Purushas (probably Aghori sect), with his Alchemy will clear the debts of the Country and save from financial difficulties, and later link all the rivers and save from severe drought.</li>
+
+<li>Only 1/7th of the World population will survive by the end of Third World War.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org40fa474" class="outline-2">
+<h2 id="org40fa474"><span class="section-number-2">9</span> kalagnanam : temple to visit</h2>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: jayradhey</p>
+<p class="date">Created: 2021-12-16 Thu 10:59</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
